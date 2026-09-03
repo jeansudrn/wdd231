@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="100%" height="100%">
+    <!-- Logo JL Minimalista e Contínuo em Azul para Curso de Software BYU -->
+    <!-- Sem plano de fundo (transparente) -->
+    <path d="M 120,50 
+             C 120,130 140,150 180,150 
+             C 210,150 220,130 220,90 
+             L 220,50 
+             M 220,90 
+             L 220,120 
+             C 220,140 235,150 260,150 
+             L 300,150" 
+          fill="none" 
+          stroke="#002E5D" 
+          stroke-width="16" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+</svg>

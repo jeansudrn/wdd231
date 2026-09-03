@@ -1,0 +1,46 @@
+/* ==========================================
+   Ajustes de Layout para Telas Maiores
+   ========================================== */
+
+/* Esconde o botão hambúrguer que não é mais necessário */
+#menu-hamburguer {
+    display: none;
+}
+
+/* Modifica o Menu de Vertical para Horizontal usando Flexbox */
+nav {
+    display: flex !important; /* Força exibição independente da classe JS */
+    flex-direction: row;
+    justify-content: center;
+    background-color: #2b6cb0;
+}
+
+nav a {
+    border-bottom: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
+    width: auto;
+}
+
+nav a:last-child {
+    border-right: none;
+}
+
+/* Organiza o conteúdo do Main em colunas paralelas se necessário */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Duas colunas: Principal e Lateral */
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Faz com que o título principal e a seção de certificados ocupem a largura toda */
+h1, .certificados-section {
+    grid-column: 1 / -1;
+}
+
+/* Efeito visual nos cards ao passar o mouse (Sem tremer/twitching) */
+.curso-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

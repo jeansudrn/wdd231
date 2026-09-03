@@ -1,11 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 231 - Página Inicial do Curso</title>
+    <meta name="description" content="Página inicial do curso WDD 231 na BYU, contendo informações sobre os projetos e certificados de desenvolvimento.">
+    <meta name="author" content="Jean Carlos Jeronimo do Amaral Leal">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/maior.css" media="min-width: 768px">
+
+    <!-- JavaScript (com defer) -->
+    <script src="scripts/data.js" defer></script>
+    <script src="scripts/navegacao.js" defer></script>
+    <script src="scripts/curso.js" defer></script>
 </head>
 <body>
-    
+
+    <header>
+        <div class="header-container">
+            <img src="imagens/logo.png" alt="Logo do Site" width="50" height="50">
+            <span>Jean Carlos Jeronimo do Amaral Leal</span>
+        </div>
+        <button id="menu-hamburguer" aria-label="Abrir menu">☰</button>
+    </header>
+
+    <nav id="menu-principal">
+        <a href="#" class="active">Página Inicial</a>
+        <a href="chamber/index.html">Projeto da Câmara</a>
+        <a href="final/index.html">Projeto Final</a>
+    </nav>
+
+    <main>
+        <h1>Página Inicial</h1>
+        
+        <section class="info-section">
+            <h2>Informações da Comunidade</h2>
+            <p>Detalhes sobre a região escolhida para o seu projeto.</p>
+        </section>
+
+        <section class="info-section">
+            <h2>Previsão do Tempo</h2>
+            <p>Dados de clima da região.</p>
+        </section>
+
+        <section class="certificados-section">
+            <h2>Lista de Cursos do Certificado</h2>
+            <div class="filtros">
+                <button id="btn-all">Todos</button>
+                <button id="btn-wdd">WDD</button>
+                <button id="btn-cse">CSE</button>
+            </div>
+            
+            <div id="cursos-container"></div>
+            
+            <p class="creditos-totais">Total de Créditos Exibidos: <span id="total-creditos">0</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+        <p>&copy; <span id="ano-atual"></span> | Jean Carlos Jeronimo do Amaral Leal |  RN/Brasil</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+
 </body>
 </html>
