@@ -10,16 +10,21 @@ body {
     line-height: 1.6;
 }
 
-/* REGRA #2 (Consolidada): Apenas uma definição para o main */
 main {
     padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-h1, h2 {
-    color: #1a365d;
-    margin-top: 0;
+/* Títulos estilo faixa do exemplo */
+h2 {
+    background-color: #3e5f7a;
+    color: #ffffff;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 /* ==========================================
@@ -50,7 +55,6 @@ header {
     font-weight: 700;
 }
 
-/* REGRA #8 (Consolidada): Apenas uma definição para o botão */
 #menu-hamburguer {
     background: none;
     border: none;
@@ -63,7 +67,6 @@ header {
 /* ==========================================
    Navegação Responsiva (Menu Hambúrguer)
    ========================================== */
-/* REGRA #9 (Consolidada): Apenas uma definição para o nav */
 nav {
     display: none;
     background-color: #2b6cb0;
@@ -75,7 +78,6 @@ nav.open {
     display: flex;
 }
 
-/* REGRA #11 (Consolidada): Apenas uma definição para o nav a */
 nav a {
     color: white;
     text-decoration: none;
@@ -95,77 +97,87 @@ nav a.active {
 }
 
 /* ==========================================
-   Seções de Informação Gerais
+   Blocos de Conteúdo
    ========================================== */
-.info-section {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
+.card-bloco, .certificados-section {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    padding: 0;
+    overflow: hidden;
     margin-bottom: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card-bloco p {
+    padding: 0 1rem 1rem 1rem;
+}
+
+.foto-bloco {
+    text-align: center;
+}
+
+.foto-perfil {
+    max-width: 150px;
+    border-radius: 12px;
+    border: 3px solid #cca231;
+    margin-bottom: 1rem;
 }
 
 /* ==========================================
-   Seção de Certificados & Lista de Cursos
+   Filtros e Cards de Cursos
    ========================================== */
-.certificados-section {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
 .filtros {
     display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-    justify-content: center;
+    gap: 0.3rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
 }
 
 .filtros button {
-    background-color: #e2e8f0;
+    background-color: #3e5f7a;
+    color: white;
     border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 700;
-    border-radius: 5px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
-.filtros button:hover {
-    background-color: #cbd5e0;
+.filtros button.active {
+    background-color: #1a202c;
 }
 
 #cursos-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
+    padding: 1rem;
 }
 
+/* Cursos Não Concluídos */
 .curso-card {
-    background-color: #fee2e2;
-    color: #991b1b;
-    border: 1px solid #fca5a5;
-    padding: 1.2rem;
+    background-color: #3b5f7e;
+    color: #ffffff;
+    padding: 1rem;
     text-align: center;
     border-radius: 6px;
-    font-size: 1.1rem;
-    transition: transform 0.2s;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
+/* Cursos Concluídos */
 .curso-card.concluido {
-    background-color: #d1fae5;
-    color: #065f46;
-    border: 1px solid #6ee7b7;
+    background-color: #cca231;
+    color: #ffffff;
 }
 
 .creditos-totais {
+    text-align: left;
+    padding-left: 1rem;
+    font-size: 0.85rem;
+    color: #4a5568;
     font-weight: bold;
-    font-size: 1.1rem;
-    text-align: center;
-    color: #1a365d;
 }
 
 /* ==========================================
