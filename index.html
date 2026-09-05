@@ -6,24 +6,25 @@
     <title>WDD 231 - Página Inicial do Curso</title>
     <meta name="description" content="Página inicial do curso WDD 231 na BYU, contendo informações sobre os projetos e certificados de desenvolvimento web de Engenharia de Software.">
     <meta name="author" content="Jean Carlos Jeronimo do Amaral Leal">
-    <link rel="stylesheet" href="estilos/normalize.css">
-    <link rel="stylesheet" href="estilos/telas-pequenas.css">
-    <link rel="stylesheet" href="estilos/maior.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/telas-pequenas.css">
+    <link rel="stylesheet" href="styles/maior.css" media="(min-width: 768px)">
     <script src="scripts/data.js" defer></script>
     <script src="scripts/navegacao.js" defer></script>
     <script src="scripts/curso.js" defer></script>
     
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-     
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
     <header>
         <div class="header-container">
-            <img src="imagens/logo.png" alt="Logo do Site" width="50" height="50">
+            <!-- Certifique-se de ter um logo.svg válido nesta pasta -->
+            <img src="imagens/logo.svg" alt="Logo do Site" width="50" height="50">
             <span>Jean Carlos Jeronimo do Amaral Leal</span>
         </div>
         <button id="menu-hamburguer" aria-label="Abrir menu">☰</button>
@@ -36,29 +37,29 @@
     </nav>
 
     <main>
-        <h1>Página Inicial</h1>
-        
-        <section class="info-section">
-            <h2>Informações da Comunidade</h2>
-            <p>Detalhes sobre a região escolhida para o seu projeto.</p>
-        </section>
+        <div class="topo-container">
+            <section class="card-bloco">
+                <h2>Sobre Mim</h2>
+                <p>Olá! Meu nome é <strong>Jean Carlos Jeronimo do Amaral Leal</strong>, moro no Brasil e sou estudante de Desenvolvimento de Software da BYU. Este espaço é dedicado para apresentar os projetos criados ao longo do semestre.</p>
+            </section>
 
-        <section class="info-section">
-            <h2>Previsão do Tempo</h2>
-            <p>Dados de clima da região.</p>
-        </section>
+            <section class="card-bloco foto-bloco">
+                <h2>Foto do perfil</h2>
+                <img src="images/perfil.jpg" alt="Sua Foto de Perfil" class="foto-perfil">
+            </section>
+        </div>
 
         <section class="certificados-section">
-            <h2>Lista de Cursos do Certificado</h2>
+            <h2>Cursos de Certificação Web</h2>
             <div class="filtros">
-                <button id="btn-all">Todos</button>
-                <button id="btn-wdd">WDD</button>
+                <button id="btn-all" class="active">Todos</button>
                 <button id="btn-cse">CSE</button>
+                <button id="btn-wdd">WDD</button>
             </div>
             
             <div id="cursos-container"></div>
             
-            <p class="creditos-totais">Total de Créditos Exibidos: <span id="total-creditos">0</span></p>
+            <p class="creditos-totais">O total de créditos para os cursos listados acima é <span id="total-creditos">0</span>.</p>
         </section>
     </main>
 
@@ -67,7 +68,7 @@
             <a href="https://github.com" target="_blank">GitHub</a>
             <a href="https://linkedin.com" target="_blank">LinkedIn</a>
         </div>
-        <p>&copy; <span id="ano-atual"></span> | Jean Carlos Jeronimo do Amaral Leal |  RN/Brasil</p>
+        <p>&copy; <span id="ano-atual"></span> | Jean Carlos Jeronimo do Amaral Leal | Seu RN/Brasil</p>
         <p id="ultimaModificacao"></p>
     </footer>
 

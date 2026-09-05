@@ -3,7 +3,6 @@ const menuPrincipal = document.getElementById("menu-principal");
 
 botaoMenu.addEventListener("click", () => {
     menuPrincipal.classList.toggle("open");
-    // Alterna o ícone entre hambúrguer (☰) e fechar (X)
     if (menuPrincipal.classList.contains("open")) {
         botaoMenu.textContent = "❌";
     } else {
