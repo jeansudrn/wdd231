@@ -14,21 +14,24 @@
     <script src="scripts/curso.js" defer></script>
     
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <img src="imagens/logo.png" alt="Logo do Site" width="50" height="50">
-        <h1>Jean Carlos Jeronimo do Amaral Leal</h1>
+        <div class="header-container">
+            <img src="imagens/logo.png" alt="Logo do Site" width="50" height="50">
+            <span>Jean Carlos Jeronimo do Amaral Leal</span>
+        </div>
+        
+        <button id="menu-hamburguer" aria-label="Abrir menu">☰</button>
+        
         <nav id="menu-principal">
             <a href="#" class="active">Página Inicial</a>
             <a href="chamber/index.html">Projeto da Câmara</a>
             <a href="final/index.html">Projeto Final</a>
-    
         </nav>
     </header>
 

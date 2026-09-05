@@ -2,17 +2,18 @@
     display: none;
 }
 
+/* Ajusta o alinhamento horizontal interno do header */
 nav {
     display: flex !important;
     flex-direction: row;
-    justify-content: center;
-    background-color: #2b6cb0;
+    width: auto;
+    margin-top: 0;
 }
 
 nav a {
     border-bottom: none;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 1rem 2rem;
+    padding: 0.5rem 1.5rem;
     width: auto;
 }
 
@@ -20,7 +21,7 @@ nav a:last-child {
     border-right: none;
 }
 
-/* Duas colunas lado a lado no topo */
+/* Grid de duas colunas paralelas para o topo */
 .topo-container {
     display: grid;
     grid-template-columns: 1fr 1fr;

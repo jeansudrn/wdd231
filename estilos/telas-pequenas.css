@@ -16,7 +16,14 @@ main {
     margin: 0 auto;
 }
 
-/* Títulos estilo faixa do exemplo */
+main h1 {
+    color: #1a365d;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
 h2 {
     background-color: #3e5f7a;
     color: #ffffff;
@@ -28,7 +35,7 @@ h2 {
 }
 
 /* ==========================================
-   Header & Logotipo
+   Header & Logotipo (Flex Wrap ativado)
    ========================================== */
 header {
     background-color: #1a365d;
@@ -37,6 +44,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    flex-wrap: wrap; 
 }
 
 .header-container {
@@ -51,7 +59,7 @@ header {
 }
 
 .header-container span {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 700;
 }
 
@@ -59,7 +67,7 @@ header {
     background: none;
     border: none;
     color: white;
-    font-size: 2rem;
+    font-size: 1.8rem;
     cursor: pointer;
     padding: 0.25rem;
 }
@@ -72,6 +80,7 @@ nav {
     background-color: #2b6cb0;
     flex-direction: column;
     width: 100%;
+    margin-top: 1rem;
 }
 
 nav.open {
@@ -117,8 +126,10 @@ nav a.active {
 }
 
 .foto-perfil {
-    max-width: 150px;
-    border-radius: 12px;
+    max-width: 100%;
+    width: 160px;
+    height: auto;
+    border-radius: 8px;
     border: 3px solid #cca231;
     margin-bottom: 1rem;
 }
@@ -128,7 +139,7 @@ nav a.active {
    ========================================== */
 .filtros {
     display: flex;
-    gap: 0.3rem;
+    gap: 0.4rem;
     padding-left: 1rem;
     margin-bottom: 1rem;
 }
@@ -137,11 +148,12 @@ nav a.active {
     background-color: #3e5f7a;
     color: white;
     border: none;
-    padding: 0.3rem 0.8rem;
-    font-size: 0.8rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
     border-radius: 4px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    font-weight: bold;
+    transition: background-color 0.2s;
 }
 
 .filtros button.active {
@@ -150,23 +162,22 @@ nav a.active {
 
 #cursos-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 0.75rem;
     padding: 1rem;
 }
 
-/* Cursos Não Concluídos */
 .curso-card {
     background-color: #3b5f7e;
     color: #ffffff;
-    padding: 1rem;
+    padding: 1.2rem;
     text-align: center;
     border-radius: 6px;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 500;
+    box-sizing: border-box;
 }
 
-/* Cursos Concluídos */
 .curso-card.concluido {
     background-color: #cca231;
     color: #ffffff;
@@ -175,7 +186,7 @@ nav a.active {
 .creditos-totais {
     text-align: left;
     padding-left: 1rem;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: #4a5568;
     font-weight: bold;
 }
