@@ -10,7 +10,7 @@ body {
     line-height: 1.6;
 }
 
-/* Evita que elementos encostem nas bordas das telas */
+/* REGRA #2 (Consolidada): Apenas uma definição para o main */
 main {
     padding: 1rem;
     max-width: 1200px;
@@ -18,7 +18,7 @@ main {
 }
 
 h1, h2 {
-    color: #1a365d; /* Azul escuro corporativo */
+    color: #1a365d;
     margin-top: 0;
 }
 
@@ -50,7 +50,7 @@ header {
     font-weight: 700;
 }
 
-/* Botão do Menu Hambúrguer */
+/* REGRA #8 (Consolidada): Apenas uma definição para o botão */
 #menu-hamburguer {
     background: none;
     border: none;
@@ -63,18 +63,19 @@ header {
 /* ==========================================
    Navegação Responsiva (Menu Hambúrguer)
    ========================================== */
+/* REGRA #9 (Consolidada): Apenas uma definição para o nav */
 nav {
-    display: none; /* Escondido por padrão no mobile */
-    background-color: #2b6cb0; /* Azul médio */
+    display: none;
+    background-color: #2b6cb0;
     flex-direction: column;
     width: 100%;
 }
 
-/* Classe ativada dinamicamente pelo JavaScript */
 nav.open {
     display: flex;
 }
 
+/* REGRA #11 (Consolidada): Apenas uma definição para o nav a */
 nav a {
     color: white;
     text-decoration: none;
@@ -85,7 +86,6 @@ nav a {
     transition: background-color 0.2s ease;
 }
 
-/* Efeito Hover e Orientação do Usuário (Active) */
 nav a:hover {
     background-color: #4299e1;
 }
@@ -115,7 +115,6 @@ nav a.active {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* Filtros (Botões) */
 .filtros {
     display: flex;
     gap: 0.5rem;
@@ -138,7 +137,6 @@ nav a.active {
     background-color: #cbd5e0;
 }
 
-/* Grid de Cursos (Layout Dinâmico) */
 #cursos-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -146,9 +144,8 @@ nav a.active {
     margin-bottom: 1.5rem;
 }
 
-/* Cartões dos Cursos (Estilo Padrão: Não Concluídos) */
 .curso-card {
-    background-color: #fee2e2; /* Vermelho/Rosa claro - Não finalizado */
+    background-color: #fee2e2;
     color: #991b1b;
     border: 1px solid #fca5a5;
     padding: 1.2rem;
@@ -158,9 +155,8 @@ nav a.active {
     transition: transform 0.2s;
 }
 
-/* Cartões dos Cursos (Estilo Diferente: Concluídos) */
 .curso-card.concluido {
-    background-color: #d1fae5; /* Verde claro - Finalizado com Sucesso */
+    background-color: #d1fae5;
     color: #065f46;
     border: 1px solid #6ee7b7;
 }
