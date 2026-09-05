@@ -35,10 +35,10 @@ h2 {
 }
 
 /* ==========================================
-   Header & Logotipo (Cor Unificada)
+   Header & Logotipo (Cor Escura Unificada)
    ========================================== */
 header {
-    background-color: #1a365d; /* Cor de fundo única do bloco superior */
+    background-color: #1a365d; 
     color: #ffffff;
     display: flex;
     justify-content: space-between;
@@ -73,11 +73,11 @@ header {
 }
 
 /* ==========================================
-   Navegação Responsiva (Unificada com o Header)
+   Navegação Responsiva (Mobile)
    ========================================== */
 nav {
     display: none;
-    background-color: #1a365d; /* Mesma cor para evitar divisões no mobile */
+    background-color: #1a365d; 
     flex-direction: column;
     width: 100%;
     margin-top: 1rem;
@@ -95,15 +95,15 @@ nav a {
     font-weight: 700;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: background-color 0.2s ease;
-    background-color: #1a365d; /* Garante preenchimento total da mesma cor */
+    background-color: #1a365d; 
 }
 
 nav a:hover {
-    background-color: #2b6cb0; /* Feedback visual sutil ao passar o mouse */
+    background-color: #2b6cb0; 
 }
 
 nav a.active {
-    background-color: #11243f; /* Azul escuro de profundidade para a aba ativa */
+    background-color: #11243f; 
 }
 
 /* ==========================================
