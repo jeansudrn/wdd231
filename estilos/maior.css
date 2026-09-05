@@ -1,16 +1,22 @@
+/* ==========================================
+   Ajustes de Layout para Telas Grandes (Desktop)
+   ========================================== */
+
 #menu-hamburguer {
     display: none;
 }
 
-/* Ajusta o alinhamento horizontal interno do header */
+/* Integra a barra de navegação sem divisões ao bloco do header */
 nav {
     display: flex !important;
     flex-direction: row;
     width: auto;
     margin-top: 0;
+    background-color: transparent; /* Remove fundos alternativos */
 }
 
 nav a {
+    background-color: transparent; /* Permite ver a cor unificada do header por baixo */
     border-bottom: none;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     padding: 0.5rem 1.5rem;
@@ -21,7 +27,17 @@ nav a:last-child {
     border-right: none;
 }
 
-/* Grid de duas colunas paralelas para o topo */
+nav a:hover {
+    background-color: #2b6cb0; /* Feedback visual integrado ao passar o mouse */
+    border-radius: 4px;
+}
+
+nav a.active {
+    background-color: #11243f; /* Tom escuro para destacar o link ativo */
+    border-radius: 4px;
+}
+
+/* Grid de duas colunas paralelas para o bloco Sobre Mim e Perfil */
 .topo-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
