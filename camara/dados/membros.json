@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Ponta Negra Beach Hotel",
+        "address": "Av. Estrela do Mar, 2100 - Ponta Negra, Natal - RN",
+        "phone": "(84) 3219-2000",
+        "website": "https://pontanegrabeach.com.br",
+        "image": "hotel-ponta-negra.jpg",
+        "level": 3
+    },
+    {
+        "name": "Restaurante Camarões",
+        "address": "Av. Engenheiro Roberto Freire, 3100 - Capim Macio, Natal - RN",
+        "phone": "(84) 3209-2425",
+        "website": "https://camaroes.com.br",
+        "image": "restaurante-camaroes.jpg",
+        "level": 3
+    },
+    {
+        "name": "Passeios de Buggy Natal",
+        "address": "Rua das Algas, 450 - Ponta Negra, Natal - RN",
+        "phone": "(84) 99981-1234",
+        "website": "https://buggynatal.com.br",
+        "image": "buggy-passeios.jpg",
+        "level": 2
+    },
+    {
+        "name": "Artesanato Potiguar Vilar",
+        "address": "Av. Afonso Pena, 580 - Petrópolis, Natal - RN",
+        "phone": "(84) 3211-4567",
+        "website": "https://artesanatopotiguar.com",
+        "image": "artesanato-vilar.jpg",
+        "level": 1
+    },
+    {
+        "name": "Natal Dunas Tour",
+        "address": "Praça das Flores, 12 - Petrópolis, Natal - RN",
+        "phone": "(84) 3222-8899",
+        "website": "https://nataldunastour.com",
+        "image": "dunas-tour.jpg",
+        "level": 2
+    },
+    {
+        "name": "Café do Sol Potiguar",
+        "address": "Av. Hermes da Fonseca, 910 - Tirol, Natal - RN",
+        "phone": "(84) 3201-3344",
+        "website": "https://cafedosolnatal.com",
+        "image": "cafe-sol.jpg",
+        "level": 1
+    },
+    {
+        "name": "Marina Badauê Passeios",
+        "address": "Pier de Ponta Negra, S/N - Natal - RN",
+        "phone": "(84) 3238-2020",
+        "website": "https://marinabadaue.com",
+        "image": "marina-badaue.jpg",
+        "level": 3
+    }
+]

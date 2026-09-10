@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretório de Membros - Câmara de Comércio de Natal</title>
+    <meta name="description" content="Diretório oficial de empresas parceiras da Câmara de Comércio de Natal/RN. Encontre hotéis, restaurantes e serviços locais.">
+    <meta name="author" content="Jean Carlos Jeronimo do Amaral Leal">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+
+    <!-- Metadados do Facebook (Open Graph) -->
+    <meta property="og:title" content="Diretório de Membros - Câmara de Comércio de Natal">
+    <meta property="og:description" content="Explore e conecte-se com as melhores empresas, comércios e prestadores de serviços de Natal/RN.">
+    <meta property="og:image" content="https://github.io">
+    <meta property="og:url" content="https://github.io">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/maior.css" media="(min-width: 768px)">
+
+    <!-- Scripts JS -->
+    <script src="scripts/diretorio.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <img src="imagens/logo-camara.png" alt="Logo Câmara de Natal" width="60" height="60">
+            <div>
+                <h1>Câmara de Comércio de Natal</h1>
+                <p class="tagline">A Cidade do Sol Fortalecendo Seus Negócios</p>
+            </div>
+        </div>
+        <button id="menu-hamburguer" aria-label="Abrir menu">☰</button>
+        <nav id="menu-principal">
+            <a href="index.html">Página Inicial</a>
+            <a href="diretorio.html" class="active">Diretório</a>
+            <a href="join.html">Associe-se</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="diretorio-header">
+            <h2>Diretório de Empresas Parceiras</h2>
+            <!-- Botões para alternar o modo de exibição -->
+            <div class="botoes-visualizacao">
+                <button id="btn-grade" class="active" aria-label="Visualização em Grade">Grid 📱</button>
+                <button id="btn-lista" aria-label="Visualização em Lista">Lista 📑</button>
+            </div>
+        </div>
+
+        <!-- O Javascript injetará os cartões ou linhas aqui dentro -->
+        <article id="membros-container" class="grid-mode"></article>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p><strong>Câmara de Comércio de Natal/RN</strong></p>
+            <p>Av. Senador Salgado Filho, 1000 - Tirol | Natal - RN</p>
+            <p>Contato: contato@camaranatal.com.br | (84) 3000-0000</p>
+        </div>
+        <div class="footer-dev">
+            <p>&copy; <span id="ano-atual"></span> | Jean Carlos Jeronimo do Amaral Leal | WDD 231</p>
+            <p id="ultimaModificacao"></p>
+        </div>
+    </footer>
+
+</body>
+</html>

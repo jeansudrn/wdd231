@@ -1,0 +1,84 @@
+/* ==========================================================================
+   Ajustes de Layout para Telas Grandes (Desktop - 768px ou mais)
+   ========================================================================== */
+
+/* Esconde o botão do menu hambúrguer que não é necessário no desktop */
+#menu-hamburguer { 
+    display: none; 
+}
+
+/* Transforma o menu em uma barra horizontal limpa integrada ao cabeçalho */
+nav {
+    display: flex !important; /* Força a exibição ignorando as classes mobile do JS */
+    flex-direction: row;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+}
+
+nav a {
+    border-bottom: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+}
+
+/* Realinha o topo do diretório de colunar para linha horizontal */
+.diretorio-header {
+    flex-direction: row !important;
+    justify-content: space-between;
+    text-align: left;
+    padding-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   MELHORIAS DO MODO LISTA NO DESKTOP (Alinhamento em Linha Corrida)
+   ========================================================================== */
+
+/* Transforma cada cartão de empresa em uma linha de dados tabular */
+.list-mode .membro-card {
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0.75rem 1.5rem;
+}
+
+/* Distribui espaçamentos exatos para cada coluna de informação */
+.list-mode .membro-card h3 { 
+    width: 25%; 
+    margin: 0; 
+    font-size: 1.1rem;
+}
+
+.list-mode .membro-card .endereco { 
+    width: 35%; 
+    margin: 0; 
+    color: #4a5568;
+}
+
+.list-mode .membro-card .telefone { 
+    width: 15%; 
+    margin: 0; 
+    color: #4a5568;
+}
+
+.list-mode .membro-card .associacao { 
+    width: 15%; 
+    text-align: center; 
+    margin: 0;
+}
+
+.list-mode .membro-card a {
+    width: 10%;
+    text-align: right;
+    margin-top: 0;
+}
+
+/* Zebra striping: Adiciona cores alternadas nas linhas do modo lista para legibilidade */
+.list-mode .membro-card:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+.list-mode .membro-card:hover {
+    background-color: #edf2f7;
+}
