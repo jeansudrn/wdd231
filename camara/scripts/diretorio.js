@@ -1,7 +1,7 @@
 /* ==========================================================================
    Configurações Iniciais e Seletores do DOM
    ========================================================================== */
-const urlJson = "dados/membros.json";
+const urlJson = "data/membros.json";
 const container = document.getElementById("membros-container");
 
 const btnGrade = document.getElementById("btn-grade");
