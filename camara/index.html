@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câmara de Comércio de Natal - Página Inicial</title>
+    <meta name="description" content="Bem-vindo à Câmara de Comércio de Natal/RN. Conectando empresas, promovendo o turismo e fortalecendo os negócios na Cidade do Sol.">
+    <meta name="author" content="Jean Carlos Jeronimo do Amaral Leal">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+
+    <!-- Metadados Open Graph (Facebook) -->
+    <meta property="og:title" content="Câmara de Comércio de Natal - Home">
+    <meta property="og:description" content="Conectando empresas e impulsionando a economia de Natal/RN. Veja eventos e o clima local.">
+    <meta property="og:url" content="https://github.io">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://github.io">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/maior.css" media="(min-width: 768px)">
+
+    <!-- JavaScript (Garante a fiação lógica separada para a home) -->
+    <script src="scripts/home.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <img src="imagens/logo-camara.png" alt="Logo Câmara de Natal" width="60" height="60">
+            <div>
+                <h1>Câmara de Comércio de Natal</h1>
+                <p class="tagline">A Cidade do Sol Fortalecendo Seus Negócios</p>
+            </div>
+        </div>
+        <button id="menu-hamburguer" aria-label="Abrir menu">☰</button>
+        <nav id="menu-principal">
+            <a href="index.html" class="active">Página Inicial</a>
+            <a href="diretorio.html">Diretório</a>
+            <a href="join.html">Associe-se</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+    </header>
+
+    <main class="home-main">
+        
+        <!-- 🟢 Seção Imagem Principal (Hero Image) e Chamada para Ação (CTA) -->
+        <section class="hero-section">
+            <img src="imagens/hero-natal.jpg" alt="Vista aérea da praia de Ponta Negra e o Morro do Careca em Natal" class="hero-image" loading="eager">
+            <div class="hero-cta">
+                <h2>Impulsione Seu Negócio na Cidade do Sol</h2>
+                <p>Faça parte da maior rede de networking empresarial do Rio Grande do Norte.</p>
+                <a href="join.html" class="btn-cta">Associe-se à Câmara 🚀</a>
+            </div>
+        </section>
+
+        <!-- Bloco de Duas Colunas: Eventos e Clima -->
+        <div class="grade-conteudo">
+            <!-- Seção de Eventos Atuais -->
+            <section class="card-home eventos-section">
+                <h2>📅 Próximos Eventos</h2>
+                <div class="evento-item">
+                    <span class="evento-data">24 Out</span>
+                    <h4>Fórum de Turismo Sustentável</h4>
+                    <p>Discussões sobre o futuro da hotelaria em Ponta Negra e Via Costeira.</p>
+                </div>
+                <div class="evento-item">
+                    <span class="evento-data">12 Nov</span>
+                    <h4>Rodada de Negócios e TI</h4>
+                    <p>Conectando startups potiguares com grandes investidores do Nordeste.</p>
+                </div>
+            </section>
+
+            <!-- Seção de Tempo Dinâmico (OpenWeatherMap API) -->
+            <section class="card-home tempo-section">
+                <h2>☀️ Clima em Natal</h2>
+                <div id="clima-atual">
+                    <p>Carregando dados meteorológicos...</p>
+                </div>
+                <hr>
+                <h3>Previsão para 3 Dias</h3>
+                <div id="previsao-3dias" class="previsao-container">
+                    <!-- Gerado dinamicamente via JS -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Seção de Empresas em Destaque Randômico -->
+        <section class="destaques-section">
+            <h2>⭐ Empresas em Destaque</h2>
+            <div id="destaques-container">
+                <!-- 2 ou 3 membros prata/ouro injetados dinamicamente -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p><strong>Câmara de Comércio de Natal/RN</strong></p>
+            <p>Av. Senador Salgado Filho, 1000 - Tirol | Natal - RN</p>
+            <p>Contato: contato@camaranatal.com.br | (84) 3000-0000</p>
+        </div>
+        <div class="footer-dev">
+            <p>&copy; <span id="ano-atual"></span> | Jean Carlos Jeronimo do Amaral Leal | WDD 231</p>
+            <p id="ultimaModificacao"></p>
+        </div>
+    </footer>
+
+</body>
+</html>

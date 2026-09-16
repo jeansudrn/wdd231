@@ -82,3 +82,30 @@ nav a {
 .list-mode .membro-card:hover {
     background-color: #edf2f7;
 }
+
+@media (min-width: 768px) {
+    /* Faz a caixa do CTA flutuar de forma elegante sobre a foto de Natal */
+    .hero-section {
+        height: 400px;
+    }
+    .hero-image {
+        height: 100%;
+    }
+    .hero-cta {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        max-width: 400px;
+        text-align: left;
+        border-radius: 6px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    
+    /* Organiza Clima e Eventos lado a lado no desktop */
+    .grade-conteudo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}

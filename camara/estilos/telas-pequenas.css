@@ -244,3 +244,144 @@ footer {
     font-size: 0.8rem;
     color: #cbd5e0;
 }
+
+/* ==========================================
+   Estilos Específicos da Página Inicial (Home)
+   ========================================== */
+.home-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Estrutura do Hero Image e Caixa CTA */
+.hero-section {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.hero-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-cta {
+    background-color: rgba(11, 60, 93, 0.9); /* Azul escuro semi-transparente */
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.hero-cta h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+    color: #ffd700;
+    background: none;
+    padding: 0;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: #ffd700;
+    color: #0b3c5d;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: transform 0.2s;
+}
+
+.btn-cta:hover {
+    transform: scale(1.05);
+}
+
+/* Blocos Informativos Gerais */
+.card-home {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.grade-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Eventos */
+.evento-item {
+    border-left: 4px solid #328cc1;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+.evento-data {
+    background-color: #328cc1;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.evento-item h4 { margin: 0.5rem 0 0.25rem 0; color: #0b3c5d; }
+.evento-item p { margin: 0; font-size: 0.85rem; color: #4a5568; }
+
+/* Clima Dinâmico */
+.tempo-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.tempo-info img { width: 64px; height: 64px; }
+.tempo-graus { font-size: 2.2rem; font-weight: bold; color: #0b3c5d; }
+.tempo-desc { text-transform: capitalize; font-weight: bold; color: #4a5568; }
+
+.previsao-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+.previsao-dia {
+    background-color: #f7fafc;
+    border: 1px solid #edf2f7;
+    padding: 0.75rem;
+    text-align: center;
+    border-radius: 4px;
+    flex: 1;
+}
+.previsao-dia h4 { margin: 0 0 0.25rem 0; font-size: 0.85rem; color: #718096; }
+.previsao-dia p { margin: 0; font-weight: bold; color: #0b3c5d; font-size: 1.1rem; }
+
+/* Empresas em Destaque */
+.destaques-section h2 {
+    color: #0b3c5d;
+    border-bottom: 2px solid #0b3c5d;
+    padding-bottom: 0.5rem;
+}
+#destaques-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+.destaque-card {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+    position: relative;
+}
+.destaque-card img { max-width: 80px; height: auto; margin-bottom: 1rem; }
+.destaque-card h3 { margin: 0 0 0.5rem 0; color: #0b3c5d; }
+.destaque-card p { margin: 0.2rem 0; font-size: 0.85rem; }
+.destaque-card a { color: #328cc1; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 0.5rem; }
