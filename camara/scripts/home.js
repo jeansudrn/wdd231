@@ -1,6 +1,4 @@
-// Substitua pela sua chave real gerada no site da OpenWeatherMap
-const apiKey = "0a59278cf31517d98d52e9f464783609"; 
-// Coordenadas geográficas oficiais de Natal/RN
+const apiKey = "SUA_API_KEY_REAL_AQUI"; // 🟢 Insira aqui a sua chave entre aspas
 const lat = "-5.7945";
 const lon = "-35.2110";
 
@@ -9,18 +7,17 @@ const urlPrevisao = `https://openweathermap.org{lat}&lon=${lon}&appid=${apiKey}&
 const urlMembros = "dados/membros.json";
 
 /* ==========================================================================
-   1. Integração Meteorológica (OpenWeatherMap)
+   1. Integração Meteorológica (OpenWeatherMap API)
    ========================================================================= */
 async function carregarDadosClima() {
     try {
-        // Busca o clima em tempo real
         const resAtual = await fetch(urlClimaAtual);
-        if (!resAtual.ok) throw new Error("Falha ao obter clima atual.");
+        if (!resAtual.ok) throw new Error(`Erro HTTP Clima: ${resAtual.status}`);
         const dadosClima = await resAtual.json();
         
-        // Exibe o clima atual na tela
         const containerAtual = document.getElementById("clima-atual");
-        const icone = dadosClima.weather[0].icon;
+        const icone = dadosClima.weather[0].icon; 
+        
         containerAtual.innerHTML = `
             <div class="tempo-info">
                 <img src="https://openweathermap.org{icone}@2x.png" alt="${dadosClima.weather[0].description}">
@@ -31,24 +28,20 @@ async function carregarDadosClima() {
             </div>
         `;
 
-        // Busca a previsão de 3 dias
         const resPrevisao = await fetch(urlPrevisao);
-        if (!resPrevisao.ok) throw new Error("Falha ao obter previsão.");
+        if (!resPrevisao.ok) throw new Error(`Erro HTTP Previsão: ${resPrevisao.status}`);
         const dadosPrevisao = await resPrevisao.json();
         
         const containerPrevisao = document.getElementById("previsao-3dias");
         containerPrevisao.innerHTML = "";
 
-        // Filtra os dados capturando apenas um registro do meio do dia (12:00) para os próximos dias
         const listaFiltrada = dadosPrevisao.list.filter(item => item.dt_txt.includes("12:00:00"));
 
-        // Renderiza apenas os 3 primeiros dias da previsão filtrada
         for (let i = 0; i < 3; i++) {
             const previsaoDia = listaFiltrada[i];
             if (!previsaoDia) break;
 
             const dataObjeto = new Date(previsaoDia.dt * 1000);
-            // Formata o dia para exibir as 3 primeiras letras em português (ex: Qua, Qui)
             const diaSemana = dataObjeto.toLocaleDateString("pt-BR", { weekday: "short" }).replace(".", "");
 
             const divDia = document.createElement("div");
@@ -62,7 +55,7 @@ async function carregarDadosClima() {
 
     } catch (erro) {
         console.error("Erro na API de Clima:", erro);
-        document.getElementById("clima-atual").innerHTML = "<p>Serviço de clima indisponível.</p>";
+        document.getElementById("clima-atual").innerHTML = `<p style="color: #e53e3e; font-weight: bold;">Serviço de clima indisponível.</p>`;
     }
 }
 
@@ -75,16 +68,15 @@ async function carregarDestaques() {
         if (!resposta.ok) throw new Error("Falha ao ler dados dos membros.");
         const membros = await resposta.json();
 
-        // Filtra apenas membros de nível Prata (2) ou Ouro (3)
+        // Filtra membros Prata (2) ou Ouro (3)
         const qualificados = membros.filter(m => m.level === 2 || m.level === 3);
 
-        // Algoritmo de embaralhamento randômico (Fisher-Yates)
+        // Algoritmo Fisher-Yates para embaralhar
         for (let i = qualificados.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [qualificados[i], qualificados[j]] = [qualificados[j], qualificados[i]];
         }
 
-        // Seleciona os 3 primeiros membros do array embaralhado
         const selecionados = qualificados.slice(0, 3);
         const containerDestaques = document.getElementById("destaques-container");
         containerDestaques.innerHTML = "";
@@ -111,20 +103,19 @@ async function carregarDestaques() {
     }
 }
 
-/* ==========================================================================
-   3. Menu Hambúrguer e Metadados do Rodapé
-   ========================================================================= */
+// Menu Hambúrguer e Rodapé
 const botaoMenu = document.getElementById("menu-hamburguer");
 const menuPrincipal = document.getElementById("menu-principal");
 
-botaoMenu.addEventListener("click", () => {
-    menuPrincipal.classList.toggle("open");
-    botaoMenu.textContent = menuPrincipal.classList.contains("open") ? "❌" : "☰";
-});
+if (botaoMenu && menuPrincipal) {
+    botaoMenu.addEventListener("click", () => {
+        menuPrincipal.classList.toggle("open");
+        botaoMenu.textContent = menuPrincipal.classList.contains("open") ? "❌" : "☰";
+    });
+}
 
 document.getElementById("ano-atual").textContent = new Date().getFullYear();
 document.getElementById("ultimaModificacao").innerHTML = `Última modificação: ${document.lastModified}`;
 
-// Inicialização automática das cargas de rede
 carregarDadosClima();
 carregarDestaques();

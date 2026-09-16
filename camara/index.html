@@ -22,25 +22,27 @@
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
+    <!-- CSS (Usando a mesma pasta de estilos interna da câmara) -->
     <link rel="stylesheet" href="estilos/normalize.css">
     <link rel="stylesheet" href="estilos/telas-pequenas.css">
     <link rel="stylesheet" href="estilos/maior.css" media="(min-width: 768px)">
 
-    <!-- JavaScript (Garante a fiação lógica separada para a home) -->
+    <!-- JavaScript (Script específico para rodar a lógica da Home) -->
     <script src="scripts/home.js" defer></script>
 </head>
 <body>
 
     <header>
         <div class="header-container">
-            <img src="imagens/logo-camara.png" alt="Logo Câmara de Natal" width="60" height="60">
+            <img src="imagens/logo-camara.png" alt="Logo Câmara de Natal" width="50" height="50">
             <div>
                 <h1>Câmara de Comércio de Natal</h1>
                 <p class="tagline">A Cidade do Sol Fortalecendo Seus Negócios</p>
             </div>
         </div>
+        
         <button id="menu-hamburguer" aria-label="Abrir menu">☰</button>
+        
         <nav id="menu-principal">
             <a href="index.html" class="active">Página Inicial</a>
             <a href="diretorio.html">Diretório</a>
