@@ -1,4 +1,4 @@
-const apiKey = "SUA_API_KEY_REAL_AQUI"; // 🟢 Insira aqui a sua chave entre aspas
+const apiKey = "0a59278cf31517d98d52e9f464783609"; // 🟢 Insira aqui a sua chave entre aspas
 const lat = "-5.7945";
 const lon = "-35.2110";
 
