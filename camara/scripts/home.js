@@ -4,8 +4,8 @@ const lat = "-5.7945";
 const lon = "-35.2110";
 
 // Rotas relativas limpas para funcionar em ambas as páginas dentro da pasta camara
-const urlClimaAtual = `https://openweathermap.org{lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=pt_br`;
-const urlPrevisao = `https://openweathermap.org{lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=pt_br`;
+const urlClimaAtual = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=pt_br`;
+const urlPrevisao = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=pt_br`;
 const urlMembros = "dados/membros.json";
 
 // Seletores de Elementos da Página Inicial (Home)
@@ -35,7 +35,7 @@ async function carregarDadosClima() {
         
         containerAtual.innerHTML = `
             <div class="tempo-info">
-                <img src="https://openweathermap.org{icone}@2x.png" alt="${descricao}">
+                <img src="https://openweathermap.org/img/wn/${icone}@2x.png" alt="${descricao}">
                 <div>
                     <div class="tempo-graus">${Math.round(dadosClima.main.temp)}°C</div>
                     <div class="tempo-desc">${descricao}</div>
