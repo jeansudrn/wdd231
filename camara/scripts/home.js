@@ -1,11 +1,14 @@
 
-const apiKey = "0a59278cf31517d98d52e9f464783609"; 
+const apiKey = "0a59278cf31517d98d52e9f464783609";
 const lat = "-5.7945";
 const lon = "-35.2110";
 
-// Rotas relativas limpas para funcionar em ambas as páginas dentro da pasta camara
-const urlClimaAtual = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=pt_br`;
-const urlPrevisao = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=pt_br`;
+const urlClimaAtual =
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=pt_br`;
+
+const urlPrevisao =
+    `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=pt_br`;
+
 const urlMembros = "dados/membros.json";
 
 // Seletores de Elementos da Página Inicial (Home)
