@@ -1,7 +1,7 @@
 /* ==========================================================================
    Configurações Iniciais e Seletores do DOM
    ========================================================================== */
-const urlJson = "/camara/dados/membros.json";
+const urlJson = "camara/dados/membros.json";
 const container = document.getElementById("membros-container");
 
 const btnGrade = document.getElementById("btn-grade");
