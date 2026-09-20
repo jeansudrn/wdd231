@@ -9,7 +9,7 @@ const urlClimaAtual =
 const urlPrevisao =
     `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=pt_br`;
 
-const urlMembros = "camara/dados/membros.json";
+const urlMembros = "dados/membros.json";
 
 // Seletores de Elementos da Página Inicial (Home)
 const containerAtual = document.getElementById("clima-atual");
