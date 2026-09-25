@@ -4,16 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscrição Recebida - Câmara de Comércio de Natal</title>
+    <meta name="description" content="Confirmação de recebimento da solicitação de associação à Câmara de Comércio de Natal/RN.">
+    <meta name="author" content="Jean Carlos Jeronimo do Amaral Leal">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="imagens/logo-camara.png" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Integrado -->
     <link rel="stylesheet" href="estilos/normalize.css">
     <link rel="stylesheet" href="estilos/telas-pequenas.css">
-    <link rel="stylesheet" href="estilos/maior.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="estilos/camara-maior.css" media="(min-width: 768px)">
+
+    <!-- JavaScript Mestre (Menu e Rodapé) -->
     <script src="scripts/home.js" defer></script>
+
+    <!-- Estilos exclusivos da página de recibo para manter a organização -->
     <style>
-        .recibo-box { background-color: white; border: 1px solid #cbd5e0; padding: 2rem; border-radius: 6px; margin: 2rem auto; max-width: 600px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        .recibo-box h2 { color: #0b3c5d; border-bottom: 2px solid #0b3c5d; padding-bottom: 0.5rem; margin-top: 0; }
-        .recibo-linha { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px dashed #edf2f7; }
-        .recibo-linha strong { color: #4a5568; }
-        .sucesso-msg { text-align: center; color: #2f855a; font-weight: bold; margin-bottom: 1.5rem; font-size: 1.2rem; }
+        .recibo-main {
+            padding: 2rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .recibo-box { 
+            background-color: white; 
+            border: 1px solid #cbd5e0; 
+            padding: 2rem; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03); 
+        }
+
+        .recibo-box h2 { 
+            color: #0b3c5d; 
+            border-bottom: 2px solid #0b3c5d; 
+            padding-bottom: 0.5rem; 
+            margin-top: 0; 
+            background: none;
+            text-align: left;
+        }
+
+        .sucesso-msg { 
+            color: #2f855a; 
+            font-weight: bold; 
+            margin-bottom: 2rem; 
+            font-size: 1.15rem; 
+            line-height: 1.5;
+        }
+
+        .recibo-box h3 {
+            font-size: 1.2rem;
+            color: #4a5568;
+            margin-bottom: 1rem;
+        }
+
+        #dados-recibo {
+            background-color: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 1rem;
+        }
+
+        .recibo-linha { 
+            display: flex; 
+            flex-direction: column;
+            padding: 0.75rem 0; 
+            border-bottom: 1px dashed #e2e8f0; 
+        }
+
+        .recibo-linha:last-child {
+            border-bottom: none;
+        }
+
+        .recibo-linha strong { 
+            color: #4a5568; 
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 0.2rem;
+        }
+
+        .recibo-linha span {
+            color: #2d3748;
+            font-size: 1.05rem;
+        }
+
+        /* Ajuste de layout para telas maiores (Desktop) */
+        @media (min-width: 600px) {
+            .recibo-linha {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .recibo-linha strong {
+                margin-bottom: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -21,9 +110,14 @@
     <header>
         <div class="header-container">
             <img src="imagens/logo-camara.png" alt="Logo Câmara de Natal" width="50" height="50">
-            <span>Jean Carlos Jeronimo do Amaral Leal</span>
+            <div>
+                <h1>Câmara de Comércio de Natal</h1>
+                <p class="tagline">A Cidade do Sol Fortalecendo Seus Negócios</p>
+            </div>
         </div>
+        
         <button id="menu-hamburguer" aria-label="Abrir menu">☰</button>
+        
         <nav id="menu-principal">
             <a href="index.html">Página Inicial</a>
             <a href="diretorio.html">Diretório</a>
@@ -32,55 +126,91 @@
         </nav>
     </header>
 
-    <main>
+    <main class="recibo-main">
         <div class="recibo-box">
-            <h2>Formulário Recebido com Sucesso!</h2>
-            <p class="sucesso-msg">Obrigado por enviar sua solicitação para a nossa equipe. Entraremos em contato em breve.</p>
-            <h3>Resumo das Informações Registradas:</h3>
+            <h2>Solicitação Recebida!</h2>
+            <p class="sucesso-msg">Obrigado por se candidatar à Câmara de Comércio de Natal/RN. Suas informações foram registradas no nosso servidor com sucesso e nossa equipe entrará em contato em breve.</p>
             
+            <h3>Comprovante de Envio (Dados do Candidato):</h3>
             <div id="dados-recibo">
-                <!-- Injetado via JS abaixo -->
+                <!-- Os dados processados do formulário serão injetados dinamicamente aqui -->
             </div>
         </div>
     </main>
 
-    <script>
-        // Lógica para ler os parâmetros GET enviados da URL e desenhar o recibo na tela
-        window.addEventListener("DOMContentLoaded", () => {
-            const parametros = new URLSearchParams(window.location.search);
-            const containerRecibo = document.getElementById("dados-recibo");
-            
-            // Função auxiliar para formatar a data ISO do campo oculto de forma amigável
-            function formatarData(stringData) {
-                if (!stringData) return "Não registrada";
-                try {
-                    const d = new Date(stringData);
-                    return d.toLocaleString("pt-BR");
-                } catch(e) { return stringData; }
-            }
-
-            if (containerRecibo) {
-                containerRecibo.innerHTML = `
-                    <div class="recibo-linha"><strong>Nome Completo:</strong> <span>${parametros.get("nome") || ""} ${parametros.get("sobrenome") || ""}</span></div>
-                    <div class="recibo-linha"><strong>E-mail Corporativo:</strong> <span>${parametros.get("email") || ""}</span></div>
-                    <div class="recibo-linha"><strong>Celular de Contato:</strong> <span>${parametros.get("celular") || ""}</span></div>
-                    <div class="recibo-linha"><strong>Empresa / Organização:</strong> <span>${parametros.get("organizacao") || ""}</span></div>
-                    <div class="recibo-linha"><strong>Nível de Associação Escolhido:</strong> <span style="text-transform: uppercase; font-weight: bold; color: #328cc1;">${parametros.get("nivel") || ""}</span></div>
-                    <div class="recibo-linha"><strong>Data/Hora de Envio (Timestamp):</strong> <span>${formatarData(parametros.get("timestamp"))}</span></div>
-                `;
-            }
-        });
-    </script>
-
     <footer>
         <div class="footer-info">
             <p><strong>Câmara de Comércio de Natal/RN</strong></p>
+            <p>Av. Senador Salgado Filho, 1000 - Tirol | Natal - RN</p>
+            <p>Contato: contato@camaranatal.com.br | (84) 3000-0000</p>
         </div>
         <div class="footer-dev">
             <p>&copy; <span id="ano-atual"></span> | Jean Carlos Jeronimo do Amaral Leal | WDD 231</p>
             <p id="ultimaModificacao"></p>
         </div>
     </footer>
+
+    <!-- Lógica de Processamento de Parâmetros de URL (Avançado) -->
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            // Captura os dados passados pelo método GET na URL (?nome=Jean&sobrenome=Leal...)
+            const parametros = new URLSearchParams(window.location.search);
+            const containerRecibo = document.getElementById("dados-recibo");
+            
+            // Função para traduzir o valor bruto do select do formulário para exibição limpa
+            function traduzirNivel(nivel) {
+                if (!nivel) return "Não selecionado";
+                switch(nivel.toLowerCase()) {
+                    case "np": return "Associação NP (Sem Fins Lucrativos)";
+                    case "bronze": return "Associação Bronze 🥉";
+                    case "silver": return "Associação Prata 🥈";
+                    case "gold": return "Associação Ouro 🥇";
+                    default: return nivel.toUpperCase();
+                }
+            }
+
+            // Função para converter e formatar o timestamp ISO oculto de forma legível
+            function formatarData(stringData) {
+                if (!stringData) return "Não registrada";
+                try {
+                    const dataObj = new Date(stringData);
+                    return dataObj.toLocaleString("pt-BR");
+                } catch(e) { 
+                    return stringData; 
+                }
+            }
+
+            // Injeta o HTML estruturado apenas com os dados que vieram do formulário
+            if (containerRecibo) {
+                containerRecibo.innerHTML = `
+                    <div class="recibo-linha">
+                        <strong>Nome Completo:</strong> 
+                        <span>${parametros.get("nome") || ""} ${parametros.get("sobrenome") || ""}</span>
+                    </div>
+                    <div class="recibo-linha">
+                        <strong>E-mail Corporativo:</strong> 
+                        <span>${parametros.get("email") || ""}</span>
+                    </div>
+                    <div class="recibo-linha">
+                        <strong>Telefone Celular:</strong> 
+                        <span>${parametros.get("celular") || ""}</span>
+                    </div>
+                    <div class="recibo-linha">
+                        <strong>Empresa / Organização:</strong> 
+                        <span>${parametros.get("organizacao") || ""}</span>
+                    </div>
+                    <div class="recibo-linha">
+                        <strong>Nível de Membresia:</strong> 
+                        <span style="font-weight: bold; color: #0b3c5d;">${traduzirNivel(parametros.get("nivel"))}</span>
+                    </div>
+                    <div class="recibo-linha">
+                        <strong>Registro de Data/Hora (Timestamp):</strong> 
+                        <span>${formatarData(parametros.get("timestamp"))}</span>
+                    </div>
+                `;
+            }
+        });
+    </script>
 
 </body>
 </html>
