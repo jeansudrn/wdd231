@@ -196,3 +196,36 @@ if (ultimaModificacaoElement) {
    ========================================================================= */
 carregarDadosClima();
 inicializarDadosMembros();
+
+/* ==========================================================================
+   🆕 ADICIONADO: GERENCIAMENTO DE FORMULÁRIO E MODAIS (SUBSCRIÇÃO)
+   ========================================================================= */
+const campoTimestamp = document.getElementById("form-timestamp");
+const botoesAbrirModal = document.querySelectorAll(".btn-modal-open");
+const botoesFecharModal = document.querySelectorAll(".btn-modal-close");
+
+// 1. Injeta automaticamente a data e hora atuais em milissegundos no campo oculto
+if (campoTimestamp) {
+    campoTimestamp.value = new Date().toISOString();
+}
+
+// 2. Controla a abertura dos modais nativos usando .showModal()
+botoesAbrirModal.forEach(botao => {
+    botao.addEventListener("click", () => {
+        const idModal = botao.getAttribute("data-modal");
+        const modalAlvo = document.getElementById(idModal);
+        if (modalAlvo) {
+            modalAlvo.showModal(); // Abre acima de tudo e tranca o fundo
+        }
+    });
+});
+
+// 3. Controla o fechamento dos modais usando .close()
+botoesFecharModal.forEach(botao => {
+    botao.addEventListener("click", () => {
+        const modalAberto = botao.closest("dialog");
+        if (modalAberto) {
+            modalAberto.close(); // Fecha e destranca a tela
+        }
+    });
+});

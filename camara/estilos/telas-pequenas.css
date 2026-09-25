@@ -385,3 +385,184 @@ footer {
 .destaque-card h3 { margin: 0 0 0.5rem 0; color: #0b3c5d; }
 .destaque-card p { margin: 0.2rem 0; font-size: 0.85rem; }
 .destaque-card a { color: #328cc1; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 0.5rem; }
+
+/* ==========================================
+   Estilos do Formulário de Associação (Mobile)
+   ========================================== */
+.associacao-main h2 {
+    color: #0b3c5d;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.layout-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Formulário e Labels Acessíveis */
+.form-cadastro {
+    background-color: white;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.form-cadastro label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-weight: bold;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.form-cadastro input[type="text"],
+.form-cadastro input[type="email"],
+.form-cadastro input[type="tel"],
+.form-cadastro select,
+.form-cadastro textarea {
+    padding: 0.65rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #2d3748;
+    background-color: #f7fafc;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.form-cadastro input:required {
+    border-left: 4px solid #e53e3e; /* Marca visual sutil para campos obrigatórios */
+}
+
+.form-cadastro input:focus, .form-cadastro select:focus, .form-cadastro textarea:focus {
+    outline: none;
+    border-color: #328cc1;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(50, 140, 193, 0.15);
+}
+
+.form-cadastro textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.btn-enviar-form {
+    background-color: #0b3c5d;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 0.5rem;
+}
+
+.btn-enviar-form:hover {
+    background-color: #328cc1;
+}
+
+/* ==========================================
+   Animação de Carregamento dos 4 Cartões
+   ========================================== */
+@keyframes entradaSuave {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cartoes-niveis-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cartoes-niveis-container h3 {
+    color: #0b3c5d;
+    margin: 0;
+}
+
+.card-nivel {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-left: 6px solid #4a5568;
+    border-radius: 6px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    /* 🟢 Aplicação da animação no carregamento inicial da página */
+    animation: entradaSuave 0.6s ease-out both;
+}
+
+/* Delay escalonado para dar efeito cascata elegante nos cartões */
+.c-np { animation-delay: 0.1s; border-left-color: #a0aec0; }
+.c-bronze { animation-delay: 0.2s; border-left-color: #cd7f32; }
+.c-silver { animation-delay: 0.3s; border-left-color: #c0c0c0; }
+.c-gold { animation-delay: 0.4s; border-left-color: #ffd700; }
+
+.card-nivel h4 { margin: 0 0 0.25rem 0; font-size: 1.1rem; color: #2d3748; }
+.card-nivel p { margin: 0 0 0.75rem 0; font-size: 0.85rem; color: #718096; }
+
+.btn-modal-open {
+    background: none;
+    border: none;
+    color: #328cc1;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0;
+    text-align: left;
+}
+.btn-modal-open:hover { text-decoration: underline; color: #0b3c5d; }
+
+/* ==========================================
+   Estilos de Modais Nativos e Backdrop (<dialog>)
+   ========================================== */
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* 🪟 Estilização da área escura atrás do modal */
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px); /* Efeito moderno de desfoque de fundo */
+}
+
+.modal-box {
+    padding: 1.5rem;
+    background-color: white;
+}
+.modal-box h3 { margin: 0 0 0.5rem 0; color: #0b3c5d; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
+.modal-box ul { padding-left: 1.2rem; margin: 1rem 0; font-size: 0.95rem; color: #4a5568; }
+.modal-box li { margin-bottom: 0.5rem; }
+
+.btn-modal-close {
+    background-color: #e2e8f0;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #4a5568;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s;
+}
+.btn-modal-close:hover { background-color: #cbd5e0; color: #2d3748; }

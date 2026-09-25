@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Associe-se - Câmara de Comércio de Natal</title>
+    <meta name="description" content="Candidate-se para se associar à Câmara de Comércio de Natal/RN e impulsione a visibilidade da sua empresa.">
+    <meta name="author" content="Jean Carlos Jeronimo do Amaral Leal">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+
+    <!-- Metadados Open Graph (Facebook) -->
+    <meta property="og:title" content="Associe-se - Câmara de Comércio de Natal">
+    <meta property="og:description" content="Escolha seu nível de associação e faça parte da maior rede de negócios de Natal/RN.">
+    <meta property="og:url" content="https://github.io">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://github.io">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/maior.css" media="(min-width: 768px)">
+
+    <!-- JavaScript Mestre -->
+    <script src="scripts/home.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <img src="imagens/logo-camara.png" alt="Logo Câmara de Natal" width="50" height="50">
+            <div>
+                <h1>Câmara de Comércio de Natal</h1>
+                <p class="tagline">A Cidade do Sol Fortalecendo Seus Negócios</p>
+            </div>
+        </div>
+        <button id="menu-hamburguer" aria-label="Abrir menu">☰</button>
+        <nav id="menu-principal">
+            <a href="index.html">Página Inicial</a>
+            <a href="diretorio.html">Diretório</a>
+            <a href="associacao.html" class="active">Associe-se</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+    </header>
+
+    <main class="associacao-main">
+        <h2>Solicitação de Associação Corporativa</h2>
+        
+        <div class="layout-formulario">
+            <!-- 💻 SEÇÃO 1: O FORMULÁRIO DE CADASTRO -->
+            <form method="get" action="agradecimento.html" class="form-cadastro">
+                
+                <label>
+                    <span>Nome: *</span>
+                    <input type="text" name="nome" autocomplete="given-name" title="Digite seu primeiro nome" required placeholder="Ex: Jean">
+                </label>
+
+                <label>
+                    <span>Sobrenome: *</span>
+                    <input type="text" name="sobrenome" autocomplete="family-name" title="Digite seu sobrenome completo" required placeholder="Ex: Leal">
+                </label>
+
+                <label>
+                    <span>Cargo na Organização:</span>
+                    <input type="text" name="cargo" autocomplete="organization-title" title="O cargo deve ter pelo menos 7 caracteres contendo apenas letras, hifens e espaços" pattern="[A-Za-zÀ-ÿ\s-]{7,}" placeholder="Ex: Diretor de Marketing">
+                </label>
+
+                <label>
+                    <span>E-mail Corporativo: *</span>
+                    <input type="email" name="email" autocomplete="email" title="Digite um endereço de e-mail válido" required placeholder="nome@empresa.com.br">
+                </label>
+
+                <label>
+                    <span>Telefone Celular: *</span>
+                    <input type="tel" name="celular" autocomplete="tel" title="Digite seu número de telefone com DDD" required placeholder="(84) 99999-0000">
+                </label>
+
+                <label>
+                    <span>Nome da Empresa/Organização: *</span>
+                    <input type="text" name="organizacao" autocomplete="organization" title="Digite o nome da sua empresa" required placeholder="Ex: Camarões Natal Restaurante">
+                </label>
+
+                <!-- Seleção de Nível de Associação -->
+                <label>
+                    <span>Nível de Associação Recomendado: *</span>
+                    <select name="nivel" required title="Selecione um nível de associação">
+                        <option value="" disabled selected>Escolha uma opção...</option>
+                        <option value="np">Associação NP (Sem fins lucrativos)</option>
+                        <option value="bronze">Associação Bronze</option>
+                        <option value="silver">Associação Prata</option>
+                        <option value="gold">Associação Ouro</option>
+                    </select>
+                </label>
+
+                <label>
+                    <span>Descrição da Atividade/Organização:</span>
+                    <textarea name="descricao" title="Descreva brevemente as atividades da sua empresa" placeholder="Conte-nos um pouco sobre a atuação do seu negócio no mercado potiguar..."></textarea>
+                </label>
+
+                <!-- Campo Oculto para Registro de Data e Hora (Timestamp) -->
+                <input type="hidden" name="timestamp" id="form-timestamp">
+
+                <button type="submit" class="btn-enviar-form">Enviar Minha Solicitação 🚀</button>
+            </form>
+
+            <!-- 💎 SEÇÃO 2: OS 4 CARTÕES DE NÍVEIS DE ASSOCIAÇÃO -->
+            <aside class="cartoes-niveis-container">
+                <h3>Conheça Nossos Níveis de Parceria</h3>
+                
+                <div class="card-nivel c-np">
+                    <h4>Associação NP</h4>
+                    <p>Ideal para ONGs e entidades sem fins lucrativos de Natal.</p>
+                    <button type="button" class="btn-modal-open" data-modal="modal-np">Ver Benefícios &rarr;</button>
+                </div>
+
+                <div class="card-nivel c-bronze">
+                    <h4>Nível Bronze</h4>
+                    <p>O ponto de partida perfeito para pequenas empresas locais.</p>
+                    <button type="button" class="btn-modal-open" data-modal="modal-bronze">Ver Benefícios &rarr;</button>
+                </div>
+
+                <div class="card-nivel c-silver">
+                    <h4>Nível Prata</h4>
+                    <p>Excelente visibilidade com direito a anúncios dinâmicos.</p>
+                    <button type="button" class="btn-modal-open" data-modal="modal-silver">Ver Benefícios &rarr;</button>
+                </div>
+
+                <div class="card-nivel c-gold">
+                    <h4>Nível Ouro</h4>
+                    <p>Exposição premium total na Home e prioridade em eventos.</p>
+                    <button type="button" class="btn-modal-open" data-modal="modal-gold">Ver Benefícios &rarr;</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- 🪟 SEÇÃO 3: WINDOWS MODAIS NATIVOS (<dialog>) -->
+    <dialog id="modal-np">
+        <div class="modal-box">
+            <h3>Associação NP (Sem Fins Lucrativos)</h3>
+            <p><strong>Taxa:</strong> Gratuita</p>
+            <ul>
+                <li>Listagem básica no Diretório Geral de Natal.</li>
+                <li>Acesso a reuniões comunitárias gerais.</li>
+                <li>Isenção total de mensalidades corporativas.</li>
+            </ul>
+            <button type="button" class="btn-modal-close">Fechar Janela X</button>
+        </div>
+    </dialog>
+
+    <dialog id="modal-bronze">
+        <div class="modal-box">
+            <h3>Associação Bronze</h3>
+            <p><strong>Taxa:</strong> R$ 150 / mês</p>
+            <ul>
+                <li>Inclusão de logotipo e contatos no Diretório.</li>
+                <li>Descontos em ingressos para palestras locais.</li>
+                <li>Acesso básico à rede de networking potiguar.</li>
+            </ul>
+            <button type="button" class="btn-modal-close">Fechar Janela X</button>
+        </div>
+    </dialog>
+
+    <dialog id="modal-silver">
+        <div class="modal-box">
+            <h3>Associação Prata 🥈</h3>
+            <p><strong>Taxa:</strong> R$ 300 / mês</p>
+            <ul>
+                <li>Todos os benefícios do nível Bronze incluídos.</li>
+                <li><strong>Participação no rodízio de Destaques Aleatórios na Home</strong> do site.</li>
+                <li>Treinamentos corporativos semestrais para até 2 funcionários.</li>
+            </ul>
+            <button type="button" class="btn-modal-close">Fechar Janela X</button>
+        </div>
+    </dialog>
+
+    <dialog id="modal-gold">
+        <div class="modal-box">
+            <h3>Associação Ouro 🥇</h3>
+            <p><strong>Taxa:</strong> R$ 500 / mês</p>
+            <ul>
+                <li>Todos os benefícios do nível Prata incluídos.</li>
+                <li>Prioridade máxima de posicionamento na vitrine da Home.</li>
+                <li>Destaque visual exclusivo em todas as consultas do Diretório.</li>
+                <li>Convites VIP gratuitos para os fóruns de alta governança e TI.</li>
+            </ul>
+            <button type="button" class="btn-modal-close">Fechar Janela X</button>
+        </div>
+    </dialog>
+
+    <footer>
+        <div class="footer-info">
+            <p><strong>Câmara de Comércio de Natal/RN</strong></p>
+            <p>Av. Senador Salgado Filho, 1000 - Tirol | Natal - RN</p>
+            <p>Contato: contato@camaranatal.com.br | (84) 3000-0000</p>
+        </div>
+        <div class="footer-dev">
+            <p>&copy; <span id="ano-atual"></span> | Jean Carlos Jeronimo do Amaral Leal | WDD 231</p>
+            <p id="ultimaModificacao"></p>
+        </div>
+    </footer>
+
+</body>
+</html>

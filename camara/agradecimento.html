@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição Recebida - Câmara de Comércio de Natal</title>
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/maior.css" media="(min-width: 768px)">
+    <script src="scripts/home.js" defer></script>
+    <style>
+        .recibo-box { background-color: white; border: 1px solid #cbd5e0; padding: 2rem; border-radius: 6px; margin: 2rem auto; max-width: 600px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .recibo-box h2 { color: #0b3c5d; border-bottom: 2px solid #0b3c5d; padding-bottom: 0.5rem; margin-top: 0; }
+        .recibo-linha { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px dashed #edf2f7; }
+        .recibo-linha strong { color: #4a5568; }
+        .sucesso-msg { text-align: center; color: #2f855a; font-weight: bold; margin-bottom: 1.5rem; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <img src="imagens/logo-camara.png" alt="Logo Câmara de Natal" width="50" height="50">
+            <span>Jean Carlos Jeronimo do Amaral Leal</span>
+        </div>
+        <button id="menu-hamburguer" aria-label="Abrir menu">☰</button>
+        <nav id="menu-principal">
+            <a href="index.html">Página Inicial</a>
+            <a href="diretorio.html">Diretório</a>
+            <a href="associacao.html">Associe-se</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="recibo-box">
+            <h2>Formulário Recebido com Sucesso!</h2>
+            <p class="sucesso-msg">Obrigado por enviar sua solicitação para a nossa equipe. Entraremos em contato em breve.</p>
+            <h3>Resumo das Informações Registradas:</h3>
+            
+            <div id="dados-recibo">
+                <!-- Injetado via JS abaixo -->
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Lógica para ler os parâmetros GET enviados da URL e desenhar o recibo na tela
+        window.addEventListener("DOMContentLoaded", () => {
+            const parametros = new URLSearchParams(window.location.search);
+            const containerRecibo = document.getElementById("dados-recibo");
+            
+            // Função auxiliar para formatar a data ISO do campo oculto de forma amigável
+            function formatarData(stringData) {
+                if (!stringData) return "Não registrada";
+                try {
+                    const d = new Date(stringData);
+                    return d.toLocaleString("pt-BR");
+                } catch(e) { return stringData; }
+            }
+
+            if (containerRecibo) {
+                containerRecibo.innerHTML = `
+                    <div class="recibo-linha"><strong>Nome Completo:</strong> <span>${parametros.get("nome") || ""} ${parametros.get("sobrenome") || ""}</span></div>
+                    <div class="recibo-linha"><strong>E-mail Corporativo:</strong> <span>${parametros.get("email") || ""}</span></div>
+                    <div class="recibo-linha"><strong>Celular de Contato:</strong> <span>${parametros.get("celular") || ""}</span></div>
+                    <div class="recibo-linha"><strong>Empresa / Organização:</strong> <span>${parametros.get("organizacao") || ""}</span></div>
+                    <div class="recibo-linha"><strong>Nível de Associação Escolhido:</strong> <span style="text-transform: uppercase; font-weight: bold; color: #328cc1;">${parametros.get("nivel") || ""}</span></div>
+                    <div class="recibo-linha"><strong>Data/Hora de Envio (Timestamp):</strong> <span>${formatarData(parametros.get("timestamp"))}</span></div>
+                `;
+            }
+        });
+    </script>
+
+    <footer>
+        <div class="footer-info">
+            <p><strong>Câmara de Comércio de Natal/RN</strong></p>
+        </div>
+        <div class="footer-dev">
+            <p>&copy; <span id="ano-atual"></span> | Jean Carlos Jeronimo do Amaral Leal | WDD 231</p>
+            <p id="ultimaModificacao"></p>
+        </div>
+    </footer>
+
+</body>
+</html>
