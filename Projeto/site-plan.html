@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de Planejamento do Site: EcoSurf Natal</title>
+    <meta name="description" content="Documento oficial de planejamento, esquema de cores, tipografia e cenários para o projeto EcoSurf Natal da BYU.">
+    <meta name="author" content="Jean Carlos Jeronimo do Amaral Leal">
+    
+    <!-- Google Fonts carregando a tipografia oficial do projeto -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="site-plan.css">
+</head>
+<body>
+
+    <header class="plan-header">
+        <h1>Documento de Planejamento do Site</h1>
+        <h2>Projeto Individual: EcoSurf Natal</h2>
+        <p class="meta-author">Desenvolvido por: Jean Carlos Jeronimo do Amaral Leal | WDD 231</p>
+    </header>
+
+    <main class="plan-main">
+        
+        <!-- 🌊 SEÇÃO 1: NOME DO SITE -->
+        <section class="plan-section">
+            <h2>1. Nome do Site</h2>
+            <div class="plan-card">
+                <h3>EcoSurf Natal</h3>
+                <p><strong>Justificativa da Escolha:</strong> Este nome foi selecionado porque combina perfeitamente os dois pilares centrais da organização: a ecologia (Eco) e a cultura esportiva local (Surf), situando o projeto geograficamente em Natal/RN. É um nome curto, memorável e que cria identificação imediata tanto com atletas quanto com ativistas ambientais.</p>
+                <p><em>Disponibilidade de Domínio Sugerida:</em> ecosurfnatal.org</p>
+            </div>
+        </section>
+
+        <!-- 🎯 SEÇÃO 2: FINALIDADE DO SITE -->
+        <section class="plan-section">
+            <h2>2. Finalidade do Site</h2>
+            <div class="plan-card">
+                <p>O site <strong>EcoSurf Natal</strong> tem como finalidade centralizar, organizar e dar visibilidade a ações comunitárias de preservação ambiental nas praias da capital potiguar. O portal servirá como uma plataforma de serviços e informações integradas para a comunidade litorânea, oferecendo:</p>
+                <ul>
+                    <li>Um painel meteorológico dinâmico com condições de vento, temperatura e status de balneabilidade das praias para a prática segura de esportes e lazer.</li>
+                    <li>Um cronograma e diretório interativo de mutirões de limpeza costeira e pontos de coleta de materiais recicláveis gerados a partir de um banco de dados JSON local.</li>
+                    <li>Um canal acessível de engajamento voluntário e denúncias de agressões ecológicas na costa através de formulários com validações avançadas.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 👥 SEÇÃO 3: CENÁRIOS DO PÚBLICO-ALVO -->
+        <section class="plan-section">
+            <h2>3. Cenários do Público-Alvo</h2>
+            <div class="plan-card">
+                <p>Para direcionar o desenvolvimento do conteúdo e responder de forma direta às necessidades dos usuários, mapeamos os dois cenários de uso mais comuns para a plataforma:</p>
+                
+                <div class="scenario-box">
+                    <h4>Cenário 1: O Atleta Local</h4>
+                    <p class="question"><strong>Pergunta:</strong> "Quero surfar na Praia dos Artistas hoje à tarde. Onde posso conferir rapidamente o clima atual e se a praia está limpa e própria para banho?"</p>
+                    <p class="answer"><strong>Resposta do Site:</strong> A Página Inicial (`index.html`) trará um painel dinâmico conectado diretamente a uma API meteorológica com a temperatura atual em tempo real. A página de Ações (`acoes.html`) exibirá o status de balneabilidade atualizado de cada praia de Natal.</p>
+                </div>
+
+                <div class="scenario-box">
+                    <h4>Cenário 2: O Ativista Comunitário</h4>
+                    <p class="question"><strong>Pergunta:</strong> "Gostaria de participar do próximo mutirão de coleta de lixo em Ponta Negra com meus amigos. Como descubro a data do evento e realizo nossa inscrição como voluntários?"</p>
+                    <p class="answer"><strong>Resposta do Site:</strong> A página de Ações Ecológicas listará todos os mutirões agendados em formato de cartões responsivos carregados via JSON. Ao escolher a ação, o usuário será direcionado à página de Voluntariado (`voluntariado.html`), que apresenta um formulário rápido de cadastro com preenchimento automático para registrar os participantes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🎨 SEÇÃO 4: ESQUEMA DE CORES -->
+        <section class="plan-section">
+            <h2>4. Esquema de Cores (Paleta WCAG AA)</h2>
+            <div class="plan-card">
+                <p>Abaixo estão especificadas as cores exatas da identidade visual da marca e sua distribuição na interface para garantir contraste aprovado pelas diretrizes de acessibilidade:</p>
+                
+                <div class="color-palette">
+                    <div class="color-block" style="background-color: #0f4c43; color: white;">
+                        <strong>#0F4C43 (Verde Esmeralda Escuro)</strong>
+                        <span>Utilizado em: Cabeçalhos (Headers), Rodapés (Footers) e faixas principais de títulos. Representa a natureza e a preservação ecológica.</span>
+                    </div>
+                    <div class="color-block" style="background-color: #0b3c5d; color: white;">
+                        <strong>#0B3C5D (Azul Marinho Profundo)</strong>
+                        <span>Utilizado em: Botões de envio, links de navegação ativos e destaques secundários. Representa o oceano potiguar.</span>
+                    </div>
+                    <div class="color-block" style="background-color: #ffd700; color: #2d3748;">
+                        <strong>#FFD700 (Dourado Vibrante)</strong>
+                        <span>Utilizado em: Efeitos de passagem de mouse (hover), selos e botões de chamada para ação (CTA). Representa o sol de Natal.</span>
+                    </div>
+                    <div class="color-block" style="background-color: #f7fafc; color: #2d3748; border: 1px solid #cbd5e0;">
+                        <strong>#F7FAFC (Cinza Claro)</strong>
+                        <span>Utilizado em: Cor de fundo principal da página (body background). Garante um contraste ideal com o texto escuro.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🔤 SEÇÃO 5: TIPOGRAFIA -->
+        <section class="plan-section">
+            <h2>5. Tipografia</h2>
+            <div class="plan-card">
+                <p>Para manter o design limpo, legível e otimizado para dispositivos móveis, utilizaremos uma única família tipográfica de alta performance obtida no catálogo do Google Fonts:</p>
+                
+                <div class="font-box font-heading">
+                    <h4>Roboto (Peso: Bold - 700)</h4>
+                    <p><strong>Aplicação:</strong> Todos os títulos de seções, h1, h2, h3 e textos de destaque do menu. Traz peso visual, modernidade e seriedade para a ONG.</p>
+                </div>
+
+                <div class="font-box font-body">
+                    <h4>Roboto (Peso: Regular - 400)</h4>
+                    <p><strong>Aplicação:</strong> Parágrafos de texto corrido, descrições, rótulos de formulários (labels) e metadados. Garante leitura fluida e confortável em qualquer tamanho de tela.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 📐 SEÇÃO 6: WIREFRAMES ESTRUTURAIS -->
+        <section class="plan-section">
+            <h2>6. Wireframes de Layout (Página Inicial)</h2>
+            <div class="plan-card">
+                <p>Os esboços abaixo representam o mapeamento estrutural e em preto-e-branco dos elementos na viewport antes da aplicação das mídias, demonstrando a adaptação responsiva (Mobile-First):</p>
+                
+                <div class="wireframe-container">
+                    <div class="wf-block">
+                        <h4>📱 Viewport Pequena (Mobile)</h4>
+                        <pre class="ascii-wireframe">
++---------------------------------------+
+
+| [LOGO]   EcoSurf Natal            [☰] | &lt;- Header
++---------------------------------------+
+
+|                                       |
+|               HERO IMAGE              |
+|                                       |
++---------------------------------------+
+
+|          TEXTO DA CHAMADA (CTA)       |
+|          [ BOTÃO INSCREVA-SE ]        |
++---------------------------------------+
+
+|                                       |
+|         🌤️ PAINEL CLIMÁTICO           |
+|                                       |
++---------------------------------------+
+
+|                                       |
+|         📅 PRÓXIMOS MUTIRÕES          |
+|                                       |
++---------------------------------------+
+
+| Contato ONG | &copy; 2026 | Última Mod.  | &lt;- Footer
++---------------------------------------+
+                        </pre>
+                    </div>
+
+                    <div class="wf-block">
+                        <h4>💻 Viewport Grande (Desktop/Tablet)</h4>
+                        <pre class="ascii-wireframe">
++-----------------------------------------------------------------------+
+
+| [LOGO] EcoSurf Natal                     Home   Ações   Associe-se    |
++-----------------------------------------------------------------------+
+
+|                                                                       |
+|                              HERO IMAGE                               |
+|   +-----------------------+                                           |
+|   | TEXTO DA CHAMADA CTA  |                                           |
+Use code with caution.
+|   | [ BOTÃO INSCREVA-SE ] |                                           |
+|   +-----------------------+                                           |
++-----------------------------------------------------------------------+
+|                                   |                                   |
+|       🌤️ PAINEL CLIMÁTICO          |        📅 PRÓXIMOS MUTIRÕES       |
+|       (Coluna da Esquerda)        |        (Coluna da Direita)        |
+|                                   |                                   |
++-----------------------------------------------------------------------+
+| Contato da ONG de Natal      |     © 2026 | Autor WDD 231 | Última Mod.  |
++-----------------------------------------------------------------------+
+
+
+
+
+© 2026 | Plano de Planejamento EcoSurf Natal | Validação W3C & WAVE

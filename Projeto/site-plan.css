@@ -1,0 +1,198 @@
+/* ==========================================================================
+   Estilos Aplicados Baseados nas Diretrizes de Cores e Fontes Escolhidas
+   ========================================================================== */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7fafc; /* Cor de fundo oficial listada no plano */
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+/* Header do Plano de Planejamento */
+.plan-header {
+    background-color: #0f4c43; /* Verde esmeralda oficial */
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.plan-header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.plan-header h2 {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.4rem;
+    color: #a7f3d0;
+    font-weight: 400;
+}
+
+.meta-author {
+    margin: 1rem 0 0 0;
+    font-size: 0.95rem;
+    color: #cbd5e0;
+}
+
+/* Conteúdo Principal */
+.plan-main {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.plan-section {
+    margin-bottom: 3rem;
+}
+
+.plan-section h2 {
+    color: #0f4c43;
+    border-bottom: 3px solid #0f4c43;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.plan-card {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+}
+
+.plan-card h3 {
+    margin-top: 0;
+    color: #0b3c5d; /* Azul marinho oficial */
+    font-size: 1.3rem;
+}
+
+.plan-card ul {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.plan-card li {
+    margin-bottom: 0.5rem;
+}
+
+/* Cenários */
+.scenario-box {
+    background-color: #f7fafc;
+    border-left: 5px solid #0b3c5d;
+    padding: 1.2rem;
+    margin-top: 1.5rem;
+    border-radius: 0 6px 6px 0;
+}
+
+.scenario-box h4 {
+    margin: 0 0 0.5rem 0;
+    color: #0b3c5d;
+    font-size: 1.1rem;
+}
+
+.question {
+    color: #c53030;
+    margin: 0 0 0.5rem 0;
+}
+
+.answer {
+    color: #2d3748;
+    margin: 0;
+}
+
+/* Paleta de Cores Gráfica */
+.color-palette {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.color-block {
+    padding: 1.2rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.color-block strong {
+    font-size: 1.1rem;
+}
+
+/* Tipografia */
+.font-box {
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+.font-heading h4 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.font-body p {
+    font-weight: 400;
+}
+
+/* Wireframes ASCII */
+.wireframe-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.wf-block h4 {
+    color: #0b3c5d;
+    margin: 0 0 0.5rem 0;
+}
+
+.ascii-wireframe {
+    background-color: #1a202c;
+    color: #a0aec0;
+    padding: 1.5rem;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    overflow-x: auto;
+    line-height: 1.4;
+    border: 1px solid #4a5568;
+}
+
+/* Rodapé do Plano */
+.plan-footer {
+    background-color: #0f4c43;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 5rem;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   Ajustes Responsivos de Mídia para o Plano
+   ========================================================================== */
+@media (min-width: 768px) {
+    .color-palette {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    
+    .wireframe-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
