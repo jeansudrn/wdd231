@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Natal - Câmara de Comércio de Natal</title>
+    <meta name="description" content="Conheça a história, dados demográficos e os 8 principais pontos de interesse de Natal/RN, a Cidade do Sol.">
+    <meta name="author" content="Jean Carlos Jeronimo do Amaral Leal">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+
+    <!-- Metadados Open Graph -->
+    <meta property="og:title" content="Sobre Natal - Câmara de Comércio">
+    <meta property="og:description" content="Descubra as oportunidades e belezas de Natal/RN.">
+    <meta property="og:url" content="https://github.io">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://github.io">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/camara-maior.css" media="(min-width: 768px)">
+
+    <!-- 🟢 SCRIPT CARREGADO COMO MÓDULO (Obrigatório do enunciado) -->
+    <script src="scripts/sobre.js" type="module" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <img src="imagens/logo-camara.png" alt="Logo Câmara de Natal" width="50" height="50">
+            <div>
+                <h1>Câmara de Comércio de Natal</h1>
+                <p class="tagline">A Cidade do Sol Fortalecendo Seus Negócios</p>
+            </div>
+        </div>
+        <button id="menu-hamburguer" aria-label="Abrir menu">☰</button>
+        <nav id="menu-principal">
+            <a href="index.html">Página Inicial</a>
+            <a href="diretorio.html">Diretório</a>
+            <a href="associacao.html">Associe-se</a>
+            <a href="sobre.html" class="active">Sobre</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 🔔 Área de Mensagem de Retorno do Cliente (Gerada pelo LocalStorage) -->
+        <div id="mensagem-visita" class="alerta-visita"></div>
+
+        <section class="introducao-natal">
+            <h2>Descubra Natal/RN</h2>
+            <p>Natal, a capital do Rio Grande do Norte, é conhecida estrategicamente como a "Esquina do Continente" e a "Cidade do Sol". Com uma população estimada em mais de 800 mil habitantes e um clima tropical permanente, a cidade se destaca como um hub dinâmico para o turismo, energias renováveis e comércio marítimo, oferecendo um ambiente altamente promissor para novos investimentos corporativos.</p>
+        </section>
+
+        <section class="galeria-interesses">
+            <h2>Pontos de Interesse e Oportunidades Locais</h2>
+            
+            <!-- 📐 O JavaScript injetará os 8 cartões nomeados por ID aqui de forma direta -->
+            <div id="grid-areas-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p><strong>Câmara de Comércio de Natal/RN</strong></p>
+            <p>Av. Senador Salgado Filho, 1000 - Tirol | Natal - RN</p>
+            <p>Contato: contato@camaranatal.com.br | (84) 3000-0000</p>
+        </div>
+        <div class="footer-dev">
+            <p>&copy; <span id="ano-atual"></span> | Jean Carlos Jeronimo do Amaral Leal | WDD 231</p>
+            <p id="ultimaModificacao"></p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -566,3 +566,103 @@ dialog::backdrop {
     transition: background-color 0.2s;
 }
 .btn-modal-close:hover { background-color: #cbd5e0; color: #2d3748; }
+
+/* ==========================================
+   Estilos de Mensagem do LocalStorage
+   ========================================== */
+.alerta-visita {
+    background-color: #ffd700;
+    color: #0b3c5d;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.introducao-natal {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 2rem;
+}
+
+/* ====================================================
+   📐 CSS GRID: GRID-TEMPLATE-AREAS NOMEADAS (MOBILE)
+   ==================================================== */
+#grid-areas-container {
+    display: grid;
+    gap: 1.5rem;
+    /* Mapeamento de coluna única corrida para telas pequenas */
+    grid-template-areas: 
+        "c1"
+        "c2"
+        "c3"
+        "c4"
+        "c5"
+        "c6"
+        "c7"
+        "c8";
+}
+
+.cartao-atrativo {
+    background-color: white;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.cartao-atrativo h2 {
+    font-size: 1.25rem;
+    background: none;
+    color: #0b3c5d;
+    text-align: left;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.cartao-atrativo叙 figure {
+    margin: 0 0 1rem 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.cartao-atrativo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.cartao-atrativo address {
+    font-style: normal;
+    font-weight: bold;
+    color: #718096;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.cartao-atrativo p {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin: 0 0 1.25rem 0;
+    flex-grow: 1; /* Empurra o botão saiba mais para alinhar na base */
+}
+
+.btn-saiba-mais {
+    background-color: #328cc1;
+    color: white;
+    border: none;
+    padding: 0.6rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}

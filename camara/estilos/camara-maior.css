@@ -119,3 +119,49 @@ nav a {
         align-items: start;
     }
 }
+
+/* ====================================================
+   📐 CSS GRID: ÁREAS NOMEADAS PARA TELAS MÉDIAS (TABLET)
+   ==================================================== */
+@media (min-width: 641px) and (max-width: 1024px) {
+    #grid-areas-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "c1 c2"
+            "c3 c4"
+            "c5 c6"
+            "c7 c8";
+    }
+}
+
+/* ====================================================
+   📐 CSS GRID: ÁREAS NOMEADAS PARA TELAS GRANDES (DESKTOP)
+   ==================================================== */
+@media (min-width: 1025px) {
+    #grid-areas-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        /* Reordenação estrutural total baseada em nomes de áreas */
+        grid-template-areas: 
+            "c1 c2 c3"
+            "c4 c5 c3"
+            "c6 c7 c8";
+    }
+
+    /* 🟢 Efeito de transição de mouse (Hover) obrigatório em telas grandes */
+    .cartao-atrativo figure img {
+        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.3s ease;
+    }
+
+    .cartao-atrativo:hover figure img {
+        transform: scale(1.06); /* Aplica efeito sutil de aproximação (zoom) */
+        filter: brightness(1.05); /* Melhora levemente o brilho da foto */
+    }
+    
+    .cartao-atrativo {
+        transition: box-shadow 0.3s ease;
+    }
+    
+    .cartao-atrativo:hover {
+        box-shadow: 0 10px 20px rgba(11, 60, 93, 0.1);
+    }
+}
