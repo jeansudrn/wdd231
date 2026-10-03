@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSurf Natal - Home</title>
+    <meta name="description" content="Preservando o ecossistema marinho e promovendo a cultura do surf sustentável nas praias de Natal/RN.">
+    <meta name="author" content="Jean Carlos Jeronimo do Amaral Leal">
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/maior.css" media="(min-width: 768px)">
+    <script src="scripts/main.js" type="module" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-placeholder">🌊</div>
+            <div>
+                <h1>EcoSurf Natal</h1>
+                <p class="tagline">Preservando o Mar da Cidade do Sol</p>
+            </div>
+        </div>
+        <button id="menu-hamburguer" aria-label="Abrir menu de navegação">☰</button>
+        <nav id="menu-principal">
+            <a href="index.html" class="active">Página Inicial</a>
+            <a href="acoes.html">Ações Ecológicas</a>
+            <a href="voluntariado.html">Voluntariado</a>
+        </nav>
+    </header>
+
+    <main class="home-layout">
+        <!-- Banner Hero (Critério 4) -->
+        <section class="hero-box">
+            <div class="hero-texto">
+                <h2>Proteja Nossas Ondas</h2>
+                <p>Junte-se à nossa comunidade e ajude a limpar as praias icônicas de Natal.</p>
+                <a href="voluntariado.html" class="cta-link">Quero Ser Voluntário 🚀</a>
+            </div>
+        </section>
+
+        <!-- Mensagem de Visita do LocalStorage (Critério 9) -->
+        <div id="mensagem-tempo" class="caixa-alerta"></div>
+
+        <!-- Seção de Clima e Informativos -->
+        <div class="secoes-grid">
+            <article class="card-informativo">
+                <h3>🌤️ Condições Atuais</h3>
+                <p><strong>Localização:</strong> Natal - RN</p>
+                <p><strong>Status Geral:</strong> Monitoramento Ativo</p>
+                <p>O monitoramento das praias é atualizado de forma semanal pela nossa equipe técnica de voluntários.</p>
+            </article>
+
+            <article class="card-informativo">
+                <h3>📅 Próxima Ação Coletiva</h3>
+                <p><strong>Evento:</strong> Mutirão de Limpeza Costeira</p>
+                <p><strong>Onde:</strong> Praia dos Artistas (Próximo aos Arrecifes)</p>
+                <p>Leve seu protetor solar. Forneceremos luvas protetoras e sacos recicláveis no local.</p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="ano-atual"></span> | EcoSurf Natal | Jean Carlos Jeronimo do Amaral Leal | WDD 231</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+
+</body>
+</html>

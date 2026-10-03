@@ -1,0 +1,18 @@
+// Módulo ES contendo os 15 itens gerados dinamicamente com 6 propriedades distintas
+export const dadosPraias = [
+    { "id": "p1", "nome": "Praia de Ponta Negra", "zona": "Zona Sul", "balneabilidade": "Própria", "nivelLixo": "Baixo", "imagem": "ponta-negra.webp", "descricao": "Principal praia turística urbana, casa do famoso Morro do Careca." },
+    { "id": "p2", "nome": "Praia de Areia Preta", "zona": "Zona Leste", "balneabilidade": "Própria", "nivelLixo": "Moderado", "imagem": "areia-preta.webp", "descricao": "Famosa por suas falésias escuras e relógios de sol à beira-mar." },
+    { "id": "p3", "nome": "Praia dos Artistas", "zona": "Zona Leste", "balneabilidade": "Inapropriada", "nivelLixo": "Alto", "imagem": "praia-artistas.webp", "descricao": "Ponto histórico do surf potiguar com fortes correntes e ondas cheias." },
+    { "id": "p4", "nome": "Praia do Meio", "zona": "Zona Leste", "balneabilidade": "Própria", "nivelLixo": "Moderado", "imagem": "praia-do-meio.webp", "descricao": "Praia tradicional com forte presença de quiosques e pedras naturais." },
+    { "id": "p5", "nome": "Praia do Forte", "zona": "Zona Leste", "balneabilidade": "Própria", "nivelLixo": "Baixo", "imagem": "praia-do-forte.webp", "descricao": "Protegida por recifes de corais, abriga a histórica fortaleza dos Reis Magos." },
+    { "id": "p6", "nome": "Praia da Redinha", "zona": "Zona Norte", "balneabilidade": "Inapropriada", "nivelLixo": "Alto", "imagem": "redinha.webp", "descricao": "Famosa pela igreja de pedra e a tradicional iguaria de ginga com tapioca." },
+    { "id": "p7", "nome": "Praia de Pirangi do Norte", "zona": "Litoral Sul", "balneabilidade": "Própria", "nivelLixo": "Baixo", "imagem": "pirangi.webp", "descricao": "Lar do Maior Cajueiro do Mundo e ponto de partida de passeios de barco." },
+    { "id": "p8", "nome": "Praia de Genipabu", "zona": "Litoral Norte", "balneabilidade": "Própria", "nivelLixo": "Baixo", "imagem": "genipabu.webp", "descricao": "Parque internacional de dunas móveis e lagoas de água doce cristalinas." },
+    { "id": "p9", "nome": "Praia de Cotovelo", "zona": "Litoral Sul", "balneabilidade": "Própria", "nivelLixo": "Baixo", "imagem": "cotovelo.webp", "descricao": "Tranquila, cercada por falésias imponentes e águas calmas para banho." },
+    { "id": "p10", "nome": "Praia de Búzios", "zona": "Litoral Sul", "balneabilidade": "Própria", "nivelLixo": "Moderado", "imagem": "buzios.webp", "descricao": "Famosa pelas ondas fortes, sendo um pico alternativo excelente para o surf." },
+    { "id": "p11", "nome": "Praia de Camurupim", "zona": "Litoral Sul", "balneabilidade": "Própria", "nivelLixo": "Baixo", "imagem": "camurupim.webp", "descricao": "Forma belas piscinas naturais na maré baixa devido à barreira de arrecifes." },
+    { "id": "p12", "nome": "Praia de Barreta", "zona": "Litoral Sul", "balneabilidade": "Própria", "nivelLixo": "Moderado", "imagem": "barreta.webp", "descricao": "Praia nativa conhecida pelas famosas piscinas naturais da Pedra Oca." },
+    { "id": "p13", "nome": "Praia de Jacumã", "zona": "Litoral Norte", "balneabilidade": "Própria", "nivelLixo": "Baixo", "imagem": "jacuma.webp", "descricao": "Famosa por sua lagoa com atividades divertidas de 'aerobunda' e 'skibunda'." },
+    { "id": "p14", "nome": "Praia de Porto Mirim", "zona": "Litoral Norte", "balneabilidade": "Própria", "nivelLixo": "Baixo", "imagem": "porto-mirim.webp", "descricao": "Oásis de coqueiros e águas mansas, vizinha das dunas de Jacumã." },
+    { "id": "p15", "nome": "Praia de Muriú", "zona": "Litoral Norte", "balneabilidade": "Própria", "nivelLixo": "Moderado", "imagem": "muriu.webp", "descricao": "Tradicional vila de pescadores com mar calmo repleto de barcos ancorados." }
+];
