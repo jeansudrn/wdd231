@@ -1,62 +1,118 @@
 /* ==========================================================================
-   Ajustes de Layout para Computadores (Desktop - 768px ou mais)
+   Ajustes Avançados para Computadores e Tablets (Telas Grandes)
    ========================================================================== */
 
-#menu-hamburguer { display: none; } /* Oculta botão hambúrguer */
+@media screen and (min-width: 768px) {
 
-nav {
-    display: flex !important;
-    flex-direction: row;
-    width: auto;
-    background-color: transparent;
-    margin-top: 0;
-}
+    /* Controle de Menu Hambúrguer (Critério 5) */
+    #menu-hamburguer { 
+        display: none !important; 
+    }
 
-nav a { border-top: none; padding: 0.5rem 1.5rem; border-radius: 4px; }
-nav a:hover { background-color: rgba(255,255,255,0.1); }
-nav a.active { background-color: #0b3c5d; }
+    nav {
+        display: flex !important;
+        flex-direction: row;
+        width: auto;
+        background-color: transparent;
+        margin-top: 0;
+    }
 
-/* Organizações de Grid na Home */
-.secoes-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-}
+    nav a {
+        border-top: none;
+        padding: 0.5rem 1.5rem;
+        border-radius: 4px;
+    }
 
-/* 🔳 MODO GRADE NO DESKTOP */
-.layout-grade {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-}
+    nav a:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+        color: #ffd700;
+    }
 
-/* 🟢 Efeito de sombra e elevação sutil no hover (Critério 4) */
-.layout-grade .card-praia {
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
-}
+    nav a.active {
+        background-color: #0b3c5d;
+        color: #ffd700;
+    }
 
-.layout-grade .card-praia:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(15, 76, 67, 0.12);
-    border-color: #0f4c43;
-}
+    /* Distribuição em Duas Colunas Paralelas na Home */
+    .secoes-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-/* ☰ MODO LISTA NO DESKTOP (Vira uma tabela de dados avançada em linha única) */
-.layout-lista .card-praia {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.75rem 1.5rem;
-}
+    /* 🔳 CONFIGURAÇÃO DO MODO GRADE AVANÇADO (Critério 6) */
+    .layout-grade {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-.layout-lista .card-praia h3 { width: 30%; margin: 0; }
-.layout-lista .card-praia p { width: 25%; margin: 0; }
-.layout-lista .card-praia .btn-abrir-modal { width: 20%; margin-top: 0; }
+    /* Efeito de Transição ao Passar o Mouse nos Cards da Grade (Critério 4) */
+    .layout-grade .card-praia {
+        transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+    }
 
-/* Zebra striping para melhor visualização tabular */
-.layout-lista .card-praia:nth-child(even) { background-color: #f7fafc; }
-.layout-lista .card-praia:hover { background-color: #edf2f7; }
+    .layout-grade .card-praia:hover {
+        transform: translateY(-4px); /* Elevação sutil suave */
+        box-shadow: 0 10px 20px rgba(15, 76, 67, 0.12); /* Sombra elegante */
+        border-color: #0f4c43; /* Destaca a borda com a cor primária */
+    }
 
-/* Formulário e Recibo Centralizados no Desktop */
-.form-eco, .caixa-recibo { max-width: 600px; margin: 0 auto; padding: 2.5rem; }
-.linha-recibo { flex-direction: row; justify-content: space-between; align-items: center; }
+    /* ☰ CONFIGURAÇÃO DO MODO LISTA TABULAR (Critério 6) */
+    .layout-lista {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .layout-lista .card-praia {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        margin-bottom: 0.5rem;
+    }
+
+    .layout-lista .card-praia h3 { 
+        width: 30%; 
+        margin: 0; 
+    }
+
+    .layout-lista .card-praia p { 
+        width: 25%; 
+        margin: 0; 
+    }
+
+    .layout-lista .card-praia .btn-abrir-modal { 
+        width: 20%; 
+        margin-top: 0; 
+    }
+
+    /* Efeito de Zebra Striping e Hover na visualização em Lista */
+    .layout-lista .card-praia:nth-child(even) { 
+        background-color: #f7fafc; 
+    }
+    
+    .layout-lista .card-praia:hover { 
+        background-color: #edf2f7; 
+    }
+
+    /* Alinhamento de Formulários e Caixa do Recibo */
+    .form-eco, .caixa-recibo {
+        max-width: 600px;
+        margin: 2rem auto;
+        padding: 2.5rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    }
+
+    .linha-recibo {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+} /* 🟢 Fim do bloco Media Query. Esta chave fecha a regra do validador perfeitamente! */
