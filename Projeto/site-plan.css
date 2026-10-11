@@ -1,0 +1,200 @@
+/* ==========================================================================
+   Aplicação Obrigatória do Esquema de Cores e Tipografia Selecionados
+   ========================================================================== */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; /* Aplicação real da tipografia de corpo do plano */
+    margin: 0;
+    padding: 0;
+    background-color: #f7fafc; /* Uso real da cor de fundo oficial */
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+/* Aplicação real da tipografia bold nos títulos */
+h1, h2, h3, h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+/* Header do Plano de Planejamento utilizando a Cor Primária */
+.plan-header {
+    background-color: #0f4c43; /* Uso real da cor primária oficial */
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.plan-header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.plan-header h2 {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.4rem;
+    color: #ffd700; /* Uso real da cor de destaque oficial */
+}
+
+.meta-author {
+    margin: 1rem 0 0 0;
+    font-size: 0.95rem;
+    color: #cbd5e0;
+}
+
+/* Área de Conteúdo Principal */
+.plan-main {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.plan-section {
+    margin-bottom: 3rem;
+}
+
+/* Títulos das seções utilizando a Cor Primária */
+.plan-section h2 {
+    color: #0f4c43; /* Uso real da cor primária oficial */
+    border-bottom: 3px solid #0f4c43;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+.plan-card {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+}
+
+/* Títulos de cartões utilizando a Cor Secundária */
+.plan-card h3 {
+    margin-top: 0;
+    color: #0b3c5d; /* Uso real da cor secundária oficial */
+    font-size: 1.3rem;
+}
+
+.plan-card ul {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.plan-card li {
+    margin-bottom: 0.5rem;
+}
+
+/* Cenários com a borda utilizando a Cor Secundária */
+.scenario-box {
+    background-color: #f7fafc;
+    border-left: 5px solid #0b3c5d; /* Uso real da cor secundária */
+    padding: 1.2rem;
+    margin-top: 1.5rem;
+    border-radius: 0 6px 6px 0;
+}
+
+.scenario-box h4 {
+    margin: 0 0 0.5rem 0;
+    color: #0b3c5d;
+    font-size: 1.1rem;
+}
+
+.question {
+    color: #c53030;
+    margin: 0 0 0.5rem 0;
+    font-weight: bold;
+}
+
+.answer {
+    color: #2d3748;
+    margin: 0;
+}
+
+/* Bloco Visual de Demonstração da Paleta de Cores */
+.color-palette {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.color-block {
+    padding: 1.2rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.primary-block { background-color: #0f4c43; color: #ffffff; }
+.secondary-block { background-color: #0b3c5d; color: #ffffff; }
+.accent-block { background-color: #ffd700; color: #2d3748; }
+.background-block { background-color: #f7fafc; color: #2d3748; border: 1px solid #cbd5e0; }
+
+/* Tipografia */
+.font-box {
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+.font-heading h4 {
+    color: #0f4c43;
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem 0;
+}
+
+/* Caixa dos Wireframes ASCII */
+.wireframe-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.wf-block h4 {
+    color: #0b3c5d;
+    margin: 0 0 0.5rem 0;
+}
+
+.ascii-wireframe {
+    background-color: #1a202c;
+    color: #a0aec0;
+    padding: 1.5rem;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    overflow-x: auto;
+    line-height: 1.4;
+    border: 1px solid #4a5568;
+}
+
+/* Rodapé do Documento utilizando a Cor Primária */
+.plan-footer {
+    background-color: #0f4c43; /* Uso real da cor primária oficial */
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 5rem;
+    font-size: 0.9rem;
+}
+
+/* Ajustes de Media Queries para Computadores (Telas Maiores) */
+@media (min-width: 768px) {
+    .color-palette {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    
+    .wireframe-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}

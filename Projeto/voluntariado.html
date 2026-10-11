@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSurf Natal - Inscreva-se</title>
+    <meta name="description" content="Faça seu cadastro na ONG EcoSurf Natal para participar ativamente de mutirões ecológicos semanais.">
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/maior.css" media="(min-width: 768px)">
+    <script src="scripts/main.js" type="module" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-placeholder">🌊</div>
+            <div>
+                <h1>EcoSurf Natal</h1>
+                <p class="tagline">Preservando o Mar da Cidade do Sol</p>
+            </div>
+        </div>
+        <button id="menu-hamburguer" aria-label="Abrir menu de navegação">☰</button>
+        <nav id="menu-principal">
+            <a href="index.html">Página Inicial</a>
+            <a href="acoes.html">Ações Ecológicas</a>
+            <a href="voluntariado.html" class="active">Voluntariado</a>
+        </nav>
+    </header>
+
+    <main class="form-layout">
+        <h2>Cadastro de Voluntariado Ambiental</h2>
+        <p>Preencha os campos abaixo de forma correta para registrar sua participação em nossas bases operacionais.</p>
+
+        <!-- Formulário com método GET apontando para a página de recibo (Critério 7) -->
+        <form method="get" action="agradecimento.html" class="form-eco">
+            <label>
+                <span>Primeiro Nome: *</span>
+                <input type="text" name="firstName" autocomplete="given-name" required placeholder="Ex: Jean">
+            </label>
+
+            <label>
+                <span>Sobrenome: *</span>
+                <input type="text" name="lastName" autocomplete="family-name" required placeholder="Ex: Leal">
+            </label>
+
+            <label>
+                <span>Endereço de E-mail: *</span>
+                <input type="email" name="userEmail" autocomplete="email" required placeholder="nome@provedor.com">
+            </label>
+
+            <label>
+                <span>Código da Prancha / Registro (ID único): *</span>
+                <input type="text" name="surfId" required placeholder="Apenas 4 letras e 2 números" pattern="[A-Za-z]{4}\d{2}" title="O registro deve conter exatamente 4 letras seguidas por 2 números.">
+            </label>
+
+            <input type="hidden" name="entryDate" id="hidden-date">
+
+            <button type="submit" class="btn-submit-eco">Registrar Minha Inscrição 🚀</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="ano-atual"></span> | EcoSurf Natal | Jean Carlos Jeronimo do Amaral Leal | WDD 231</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+
+</body>
+</html>

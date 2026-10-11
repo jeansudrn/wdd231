@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSurf Natal - Painel de Monitoramento</title>
+    <meta name="description" content="Acompanhe em tempo real o status de balneabilidade, nível de lixo e as fotos das 15 praias de Natal/RN.">
+    <meta name="author" content="Jean Carlos Jeronimo do Amaral Leal">
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/maior.css" media="(min-width: 768px)">
+    <script src="scripts/main.js" type="module" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-placeholder">🌊</div>
+            <div>
+                <h1>EcoSurf Natal</h1>
+                <p class="tagline">Preservando o Mar da Cidade do Sol</p>
+            </div>
+        </div>
+        <button id="menu-hamburguer" aria-label="Abrir menu de navegação">☰</button>
+        <nav id="menu-principal">
+            <a href="index.html">Página Inicial</a>
+            <a href="acoes.html" class="active">Ações Ecológicas</a>
+            <a href="voluntariado.html">Voluntariado</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="titulo-pagina">
+            <h2>Painel de Monitoramento Litorâneo</h2>
+            <p>Clique em "Mais Informações" para abrir detalhes ecológicos avançados e fotos de cada setor costeiro.</p>
+            
+            <div class="controles-layout">
+                <button type="button" id="grid-btn" class="active">Visualização em Grade 🔳</button>
+                <button type="button" id="list-btn">Visualização em Lista ☰</button>
+            </div>
+        </section>
+
+        <!-- Container populado via JavaScript -->
+        <div id="praias-container" class="layout-grade"></div>
+    </main>
+
+    <!-- Estrutura do Diálogo Modal Nativo Corrigido -->
+    <dialog id="modal-info">
+        <div class="modal-conteudo">
+            <h3 id="modal-titulo">Detalhes Técnicos</h3>
+            
+            <!-- Injeção visual da foto da praia ativa -->
+            <img id="modal-imagem" src="" alt="" class="modal-foto-praia">
+            
+            <p id="modal-zona"></p>
+            <p id="modal-status"></p>
+            <p id="modal-lixo"></p>
+            <p id="modal-texto"></p>
+            <button type="button" id="modal-fechar-btn">Fechar Janela X</button>
+        </div>
+    </dialog>
+
+    <footer>
+        <p>&copy; <span id="ano-atual"></span> | EcoSurf Natal | Jean Carlos Jeronimo do Amaral Leal | WDD 231</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+
+</body>
+</html>

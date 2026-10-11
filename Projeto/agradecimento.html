@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSurf Natal - Confirmação</title>
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/maior.css" media="(min-width: 768px)">
+    <script src="scripts/main.js" type="module" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-placeholder">🌊</div>
+            <div>
+                <h1>EcoSurf Natal</h1>
+                <p class="tagline">Preservando o Mar da Cidade do Sol</p>
+            </div>
+        </div>
+        <button id="menu-hamburguer" aria-label="Abrir menu de navegação">☰</button>
+        <nav id="menu-principal">
+            <a href="index.html">Página Inicial</a>
+            <a href="acoes.html">Ações Ecológicas</a>
+            <a href="voluntariado.html">Voluntariado</a>
+        </nav>
+    </header>
+
+    <main class="recibo-layout">
+        <div class="caixa-recibo">
+            <h2>Cadastro Confirmado! 🏄‍♂️</h2>
+            <p>Seus dados de inscrição foram decodificados da URL com sucesso por meio de parâmetros de pesquisa (Critério 7).</p>
+            
+            <div id="dados-usuario-recibo" class="dados-quadro">
+                <!-- Dados injetados dinamicamente via JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="ano-atual"></span> | EcoSurf Natal | Jean Carlos Jeronimo do Amaral Leal | WDD 231</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+
+</body>
+</html>
